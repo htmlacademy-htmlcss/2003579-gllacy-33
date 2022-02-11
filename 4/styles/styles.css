@@ -1,0 +1,375 @@
+@font-face {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/inter-400.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/inter-700.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 900;
+    src: url("../fonts/inter-900.woff2") format("woff2");
+    font-display: swap;
+}
+
+
+body {
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    background-color: #FEAFC3;
+    /* цвета фонов других вариантов заглавной страницы: #69A9FF   #FCC850 */
+    color: #2D3440;
+}
+
+/* page-header */
+
+.navigation-link {
+    line-height: 20px;
+    color: #2D3440;
+    text-decoration: none;
+
+}
+
+.user-navigation>li {
+    font-size: 14px;
+
+}
+
+.phone {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #2D3440;
+    text-decoration: none;
+}
+
+/* main */
+
+/* слайдер */
+
+.ice-cream-title{
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 46px;
+}
+
+.ice-cream-description {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.order-now{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #2D3440;
+    text-align: center;
+    background-color: #FCFCFC;
+    width: 139px;
+    height: 44px;
+    border-width: 0;
+    outline: 4px solid rgba(252, 252, 252, 0.4);
+    border-radius: 26px;
+}
+
+/* промо-секция: подарки при заказе */
+
+.gifts-for-order-header {
+    font-weight: 900px;
+    font-size: 32px;
+    line-height: 46px;
+}
+
+.get-for-free {
+    background-color: #ff7799;
+    border-radius: 16px;
+}
+
+.get-for-free>h4 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.recieve-gift {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #2D3440;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* витрина самых популярных вкусов */
+
+.bestchoice-title {
+    font-weight: 900px;
+    font-size: 32px;
+    line-height: 46px;
+}
+
+.flypage {
+    background-color: #FCFCFC;
+    border-radius: 8px;
+}
+
+.flypage>h5 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.product-card-image {
+    border-radius: 50%;
+}
+
+.price{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+/* сильные стороны магазина */
+
+.strong-points {
+    background-image: url("../img/index/waffle_cropped.jpg");
+    background-repeat: repeat-x;
+    border-radius: 16px;
+}
+
+.strong-points-title {
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 46px;
+}
+
+/* блог */
+
+.new-article {
+    background-image: url("../img/index/three_ice_cream_scoops.jpg");
+    background-repeat: no-repeat;
+    border-radius: 16px;
+    width: 570px;
+    height: 220px;
+}
+
+.new-article>b {
+    line-height: 20px;
+    color: #565C66;
+}
+
+.article-link {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #2D3440;
+    text-decoration: none;
+    background-image: none;
+}
+
+/*подписка*/
+
+.subscription {
+    background-color: #FCFCFC;
+    border-radius: 16px;
+}
+
+.subscription>p {
+    font-weight: 400;  /* почему это значение не унаследовалось от body?*/
+    color: #565C66;
+}
+
+.send-button {
+    background-color: #FF2F64;
+    color: #FCFCFC;
+    width: 152px;
+    height: 44px;
+    border-width: 0;
+    outline: 4px solid rgba(255, 47, 100, 0.3);
+    border-radius: 26px;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    text-align: center;
+
+}
+
+/* доставка */
+
+.delivery {
+    background-image: url("../img/index/assorted_ice-cream.jpg");
+    background-repeat: no-repeat;
+    width: 1170px;
+    height: 534px;
+    border-radius: 16px;
+}
+
+.delivery-title {  /*внешний вид в браузере отличается от макета */
+    font-weight: 900px;
+    font-size: 32px;
+    line-height: 46px;
+}
+
+.delivery-prompting {
+    color: #565C66;
+    font-size: 16px;
+    font-weight: 400; 
+    line-height: 22px;
+}
+
+.delivery-tip {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #565C66;
+
+}
+
+.delivery-form {
+    background-color: #FCFCFC;
+    border-radius: 8px;
+}
+
+.delivery-date, .delivery-recipient_phone, .delivery-recipient-address {
+    font-size: 16px;
+    font-weight: 700px;
+    line-height: 20px;
+}
+
+/* контакты */
+
+.address-section {
+    background-image: url("../img/index/three_ice_cream_cones.jpg");
+    background-repeat: no-repeat;
+    width: 1170px;
+    height: 492px;
+    border-radius: 16px;
+}
+
+.gllacy-shop-address-title, .gllacy-shop-phone-title {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #565C66;
+}
+
+.gllacy-shop-address-link, .gllacy-shop-phone {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+}
+
+.open-hours {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #565C66;
+}
+
+.white-background {
+    width: 343px;
+    height: 364px;
+    background-color: #FCFCFC;
+    border-radius: 8px;
+}
+
+.open-feedback-window {
+    background-color: #FF2F64;
+    color: #FCFCFC;
+    width: 250px;
+    height: 46px;
+    border-width: 0;
+    outline: 4px solid rgba(255, 47, 100, 0.3);
+    border-radius: 26px;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* footer */
+
+.extra-link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-decoration: none;
+    color: #2D3440;
+}
+
+.for-suppliers {
+    font-weight: 700;
+}
+
+.web-developer, .web-developer-link {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #2D3440
+}
+
+
+/* Catalog */
+
+.navigation-link-current {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #FCFCFC;
+    background-color: #FF4A78;
+}
+
+.main-inner-title {
+    font-size: 32px;
+    line-height: 46px;
+    font-weight: 900;
+    color: #2D3440;
+}
+
+.breadcrumbs-link {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #2D3440;
+}
+
+.breadcrumbs-current {
+    text-decoration: none;
+}
+
+.pagination-show-more {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #2D3440;
+    text-align: center;
+    background-color: #FCFCFC;
+    width: 179px;
+    height: 44px;
+    border-width: 0;
+    outline: 4px solid rgba(252, 252, 252, 0.4);
+    border-radius: 26px;
+}
+
+.pagination-link {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #2D3440;
+    text-decoration: none;
+}
+
