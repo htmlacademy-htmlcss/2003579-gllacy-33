@@ -23,7 +23,16 @@
 }
 
 
+html {
+    height: 100%;
+}
+
+
 body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     font-family: Inter, sans-serif;
     font-size: 16px;
     line-height: 22px;
@@ -32,7 +41,39 @@ body {
     color: #2D3440;
 }
 
+.visually-hidden {
+    display: none;
+}
+
 /* page-header */
+
+.main-header, .page-header {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.navigation {
+    display: flex;
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.navigation-list {
+    margin: 0;
+    padding: 0;
+    width: 654px;
+}
+
+.user-navigation {
+    max-width: 452px;
+    margin-left: auto;
+}
+
+.logo {
+    display: block;
+    padding: 24px 16px 24px 98px;
+    margin: 0;
+}
 
 .navigation-link {
     line-height: 20px;
@@ -56,7 +97,45 @@ body {
 
 /* main */
 
+.main-container {
+    flex-grow: 1;
+}
+
+.page-container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
 /* слайдер */
+
+.bestsellers-slider {
+    margin: 0 auto;
+    margin-bottom: 80px;
+    width: 1170px;
+    text-align: left;
+
+}
+
+.slider-description-wrap {
+    width: 470px;
+}
+
+.slider-image-wrap {
+    width: 348px;
+}
+
+.slider-button { /* кнопки отображаются криво */
+    padding: 0;
+    border-width: 0;
+    background-color: #FEAFC3; /* нужно будет переключать цвет при перелистывании слайдов */
+     
+}
+
+.slider-list-item {
+    display: flex;
+    width: 1170px;
+    margin: 0 auto;
+}
 
 .ice-cream-title{
     font-weight: 900;
@@ -75,24 +154,47 @@ body {
     font-weight: 700;
     color: #2D3440;
     text-align: center;
-    background-color: #FCFCFC;
+    text-decoration: none;
+    /* background-color: #FCFCFC;    - БЫЛО НАПИСАНО ПОД BUTTON
     width: 139px;
     height: 44px;
     border-width: 0;
     outline: 4px solid rgba(252, 252, 252, 0.4);
-    border-radius: 26px;
+    border-radius: 26px; */
 }
 
 /* промо-секция: подарки при заказе */
 
+.gifts-for-orders {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1170px;
+    margin: 0 auto 80px auto;
+
+}
+
 .gifts-for-order-header {
-    font-weight: 900px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    width: 1170px;  
+    font-weight: 900;
     font-size: 32px;
     line-height: 46px;
+    text-align: center;
+}
+
+.gifts-wrap {
+    display: flex;
+    width: 1170px;
+    margin: 0 auto;
+    justify-content: space-between;
+    
 }
 
 .get-for-free {
     background-color: #ff7799;
+    width: 570px;
     border-radius: 16px;
 }
 
@@ -113,15 +215,40 @@ body {
 
 /* витрина самых популярных вкусов */
 
+.bestchoice {
+    display: flex;
+    flex-direction: column;
+    width: 1170px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    
+
+}
+
 .bestchoice-title {
-    font-weight: 900px;
+    display: block;
+    width: 1170px;
+    font-weight: 900;
     font-size: 32px;
     line-height: 46px;
+    text-align: center;
+    margin-bottom: 107px;
+}
+
+.bestchoice-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+
 }
 
 .flypage {
+    display: flex;
+    flex-direction: column;
     background-color: #FCFCFC;
     border-radius: 8px;
+    width: 270px;
 }
 
 .flypage>h5 {
@@ -131,7 +258,13 @@ body {
 }
 
 .product-card-image {
+    order: -1;
+    display: block;
+    width: 168px;
     border-radius: 50%;
+    margin-top: -51px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .price{
@@ -144,25 +277,68 @@ body {
 
 .strong-points {
     background-image: url("../img/index/waffle_cropped.jpg");
+    width: 1170px;
     background-repeat: repeat-x;
     border-radius: 16px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.strong-points-inner-wrap {  /*неправильно центрируется белая подложка */
+    background-color: #FCFCFC;
+    width: 1122px;
+    border-radius: 16px;
+    margin-left: 24px;
+    margin-right: 24px;
 }
 
 .strong-points-title {
+    display: block;
+    width: 1122px;
+    margin: 0 auto;
+    text-align: center;
     font-weight: 900;
     font-size: 32px;
     line-height: 46px;
+
+}
+
+.strong-points-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.strong-points-item {
+    width: 506px;
+}
+
+/* контейнер для блога и подписки */
+
+.article-subscription-container {
+    display: flex;
+    justify-content: space-between;
+    width: 1170px;
+    margin: 0 auto;
+    margin-bottom: 76px;
+    
+
 }
 
 /* блог */
 
-.new-article {
+.article-wrap {
+    width: 570px;
     background-image: url("../img/index/three_ice_cream_scoops.jpg");
     background-repeat: no-repeat;
     border-radius: 16px;
-    width: 570px;
-    height: 220px;
+    margin-right: auto;
+    
 }
+
 
 .new-article>b {
     line-height: 20px;
@@ -181,11 +357,20 @@ body {
 /*подписка*/
 
 .subscription {
+    background-image: url('../img/index/post_stripes_optimized.jpg');
+    width: 570px;
+    border-radius: 16px;
+    margin-left: auto;
+}
+
+.subscription-inner-wrap {
     background-color: #FCFCFC;
+    width: 558px;
+    margin: auto;
     border-radius: 16px;
 }
 
-.subscription>p {
+.subscription-inner-wrap>p {
     font-weight: 400;  /* почему это значение не унаследовалось от body?*/
     color: #565C66;
 }
@@ -209,15 +394,33 @@ body {
 /* доставка */
 
 .delivery {
+    display: flex;
     background-image: url("../img/index/assorted_ice-cream.jpg");
     background-repeat: no-repeat;
     width: 1170px;
-    height: 534px;
     border-radius: 16px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.delivery-description-wrap {
+    width: 400px;
+    margin: 0 auto 0 100px;
+
+}
+
+.delivery-data {
+    width: 500px;
+    margin: 0 64px 0 auto;
+    background-image: none;
+    background-color: #FCFCFC;
+    border-radius: 8px;
 }
 
 .delivery-title {  /*внешний вид в браузере отличается от макета */
-    font-weight: 900px;
+    font-weight: 900;
     font-size: 32px;
     line-height: 46px;
 }
@@ -237,14 +440,10 @@ body {
 
 }
 
-.delivery-form {
-    background-color: #FCFCFC;
-    border-radius: 8px;
-}
 
 .delivery-date, .delivery-recipient_phone, .delivery-recipient-address {
     font-size: 16px;
-    font-weight: 700px;
+    font-weight: 700;
     line-height: 20px;
 }
 
@@ -254,8 +453,11 @@ body {
     background-image: url("../img/index/three_ice_cream_cones.jpg");
     background-repeat: no-repeat;
     width: 1170px;
-    height: 492px;
     border-radius: 16px;
+    margin: 0 auto;
+    padding-top: 64px;
+    padding-bottom: 64px;
+
 }
 
 .gllacy-shop-address-title, .gllacy-shop-phone-title {
@@ -279,11 +481,12 @@ body {
     color: #565C66;
 }
 
-.white-background {
+.address-inner-wrap {
     width: 343px;
-    height: 364px;
     background-color: #FCFCFC;
     border-radius: 8px;
+    margin-left: 64px;
+    margin-right: auto;
 }
 
 .open-feedback-window {
@@ -302,6 +505,15 @@ body {
 }
 
 /* footer */
+
+.page-footer-container {
+    display: flex;
+    padding-top: 48px;
+    justify-content: space-between;
+    width: 1170px;
+    margin: 0 auto;
+}
+
 
 .extra-link {
     font-weight: 400;
@@ -349,6 +561,17 @@ body {
 
 .breadcrumbs-current {
     text-decoration: none;
+}
+
+.product-card-list {
+    display: flex;
+    width: 1170px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-card {
+    margin-bottom: 91px;
 }
 
 .pagination-show-more {
