@@ -93,10 +93,7 @@ body {
     margin: 0;
 }
 
-.logo-link {
-    margin: 0; 
-    padding: 0; /*не получается сдвинуть логотип левее - во вкладке Computed по-прежнему остается padding 16px слева*/
-}
+
 
 .navigation-link {
     display: block;
@@ -109,6 +106,10 @@ body {
     padding-right: 16px;
 }
 
+.logo-link {
+    margin: 0; 
+    padding: 0; /*не получается сдвинуть логотип левее - во вкладке Computed по-прежнему остается padding 16px слева*/
+}
 
 .user-navigation>li {
     font-size: 14px;
@@ -136,13 +137,13 @@ body {
 
 .icon-n-text-link {
     height: 32px;
-    background-color: rgba(252, 252, 252, 0,3);  /*этот блок не работает*/
+    background-color: rgba(252, 252, 252, 0.3);  
     border-radius: 26px;
 }
 
 .icon-n-text-link a {
     padding: 8,5 16 8,5 16;
-    background-color: rgba(252, 252, 252, 0,3);
+    
 }
 
 /* main */
@@ -204,7 +205,7 @@ body {
 .slider-swipe-button {
     border-width: 0;
     border-radius: 26px;
-    background-color: rgba(252, 252, 252, 0,3); /* найти работающий способ наложить полупрозрачный слой на кнопку */
+    background-color: rgba(252, 252, 252, 0.3); 
 }
 
 .slider-list-item {
@@ -260,7 +261,7 @@ body {
 }
 
 
-.social_media_after_slider {
+.social-media-after-slider {
     margin-left: auto;
     margin-right: 0;
 }
@@ -276,7 +277,7 @@ body {
 
 }
 
-.social_media_after_slider .social-media-list {
+.social-media-after-slider .social-media-list {
     margin-right: 98px;
     margin-left: auto;
 
@@ -350,6 +351,12 @@ body {
 
 }
 
+.raspberry-free-image, .marshmallow-free-image{
+    margin: 0;
+    margin-top: auto;
+    padding: 0;
+}
+
 
 .raspberry-free-header, .marshmallow-free-header {
     font-weight: 700;
@@ -361,19 +368,21 @@ body {
     margin-bottom: 16px;
 }
 
-.gift-right-inner-column { /*почему зефирки съехали вниз(на макете фото обрезано), а малина нет? кроме того, сами фото у меня получились вытянутыми*/
-    display: block;
+.gift-right-inner-column { 
     padding-top: 28px;
     margin: 0;
-    margin-bottom: -44px;
+    align-self: flex-end;
 }
 
-.left-container {
+.left-container { /* не получается убрать тонкую полоску под картинкой*/
     padding-right: 15px;
+    margin-top: auto;
 }
 
 .right-container {
     padding-right: 7 px;
+    margin-top: auto;
+
 }
 
 .recieve-gift {
@@ -445,7 +454,17 @@ body {
     padding-bottom: 24px;
 }
 
-.flypage>h5 {
+.product-card-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 190px;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.product-card-link>h5 {
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
@@ -455,7 +474,7 @@ body {
     padding: 0;
 }
 
-.flypage>h3 {   /*для заголовков в карточках в Каталоге*/
+.product-card-link>h3 {   /*для заголовков в карточках в Каталоге*/
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
@@ -489,7 +508,8 @@ body {
 
 .price-n-button-wrap {
     display: flex;
-    justify-content: space-between; /* почему не работает?*/
+    width: 190px;
+    justify-content: space-between; 
 }
 
 .price{
@@ -533,6 +553,7 @@ body {
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom: 56px;
+    padding-top: 56px;
 }
 
 .strong-points-title {
@@ -547,9 +568,10 @@ body {
 
 }
 
-.strong-points-list {  /* не знаю, как разделить элементы списка на две колонки, ведь <li> нельзя оборачивать в <div>*/
-    display: flex;
-    flex-direction: column;
+.strong-points-list {  
+    display: grid;
+    gap: 31px;
+    grid-template-columns: 506px 506px;
     padding: 0;
     margin: 0;
     list-style-type: none;
@@ -557,6 +579,7 @@ body {
 
 .strong-points-item {
     width: 506px;
+    margin-bottom: 9px;
 }
 
 /* контейнер для блога и подписки */
@@ -710,18 +733,48 @@ body {
 
 }
 
+.delivery-form {  /* почему-то наехали поля формы друг на друга*/
+    display: grid;
+    width: 420px;
+    grid-template-columns: 117px 287px;
+    column-gap: 16px;
+    row-gap: 20px;
+    padding: 0;
+    margin: 0;
+}
 
-.delivery-date, .delivery-recipient_phone, .delivery-recipient-address {
+
+.delivery-date-form, .delivery-phone-form, .delivery-address-form {
     font-size: 16px;
     font-weight: 700;
     line-height: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.delivery-date {
+    grid-column: 1/2;
+    width: 117px;
+    display: flex;
+    flex-direction: column;
+}
+
+.delivery-phone-form {
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
 }
 
 .delivery-address-form {
-    margin-bottom: 32px;
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
 }
 
 .delivery-button {
+    grid-column: 1/-1;
+    justify-self: center;
     margin-left: auto;
     margin-right: auto;
 }
@@ -736,6 +789,7 @@ body {
     margin: 0 auto;
     padding-top: 64px;
     padding-bottom: 64px;
+    background-size: cover;
 
 }
 
@@ -874,7 +928,9 @@ body {
     height: 36px;
     border-width: 0;
     background-color: #FF4A78;
-    border-radius: 26px;    /*почему не работает скругление уголков? в случае с order-now и order-now-wrap все работало*/
+    border-radius: 26px;
+
+        /*почему не работает скругление уголков? в случае с order-now и order-now-wrap все работало*/
 
 }
 
@@ -889,6 +945,7 @@ body {
     text-align: center;
     text-decoration: none;
     padding: 8px 16px 8px 16px;
+    border-radius: 26px;
 
     
 }
@@ -928,13 +985,95 @@ body {
     text-decoration: none;
 }
 
+.select-control {
+    border-width: 0;
+    border-radius: 20px;
+    padding: 8px 61px 8px 16px;
+    background-color: #FDC6D4;
+
+}
+
+.select-control>option {
+    font-weight: 400px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #2D3440;
+    background-color: rgba(252, 252, 252, 0.3);
+
+}
+
 .catalog-filter {
     margin-bottom: 99px;
 }
 
 
+.fat-content {
+    display: flex;
+    flex-direction: column;
+    width: 367px;
+    padding: 0;
+    border-width: 0;
+}
+
+.fat-content-title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #2D3440;
+    margin: 0;
+    margin-bottom: 8px;
+    margin-left: 16px;
+    padding: 0;
+}
+
+.fat-content-list {
+    display: flex;
+    justify-content: space-between;
+    width: 367px;
+    margin: 0;
+    padding: 10px 16px 10px 16px;
+    list-style-type: none;
+    border-radius: 20px;
+    background-color: rgba(252, 252, 252, 0.3)
+    
+}
+
+.filling-filter {
+    display: flex;
+    flex-direction: column;
+    margin: 0; 
+    padding: 0;
+    border-width: 0;
+}
+
+.filling-title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #2D3440;
+    margin: 0;
+    margin-bottom: 8px;
+    margin-left: 16px;
+    padding: 0;
+}
+
+.filling-list {
+    display: flex;
+    width: 596px;
+    justify-content: space-between;
+    margin: 0;
+    padding: 10px 16px 10px 16px;
+    list-style-type: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #2D3440;
+    background-color:rgba(252, 252, 252, 0.3);
+    border-radius: 20px;
+}
+
 .apply-button {
-    background-color: rgba(252, 252, 252, 0,3);
+    background-color: rgba(252, 252, 252, 0.3);
     color: #2D3440;
     width: 187px;
     height: 36px;
@@ -968,6 +1107,7 @@ body {
     display: flex;
     justify-content: center;
     width: 1170px;
+    margin-top: -75px;
     padding-top: 41px;
     padding-bottom: 41px;
 }
@@ -984,6 +1124,7 @@ body {
     border-width: 0;
     outline: 4px solid rgba(252, 252, 252, 0.4);
     border-radius: 26px;
+    position: absolute;
     margin-left: auto;  /* не устанавливается по центру*/
     margin-right: auto;
 }
