@@ -123,7 +123,7 @@
           -->
         </ol>
 
-        <section class="social-media social_media_after_slider">
+        <section class="social-media social-media-after-slider">
           <ul class="social-media-list">
             <li class="social-media-list-item">
               <a class="social-media-link" href="https://vk.com/htmlacademy">
@@ -161,13 +161,13 @@
             <div class="gift-left-inner-column">
               <h4 class="raspberry-free-header">Малинка даром!</h4>
               <p>При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.</p>
-              <div class="recieve-gift-wrap left-container">
+              <div class="recieve-gift-wrap">
                 <a class="recieve-gift" href="#">Хочу подарок</a>
               </div>
             </div>
 
             <div class="gift-right-inner-column left-container">
-              <img class="raspberry-free-image" src="img/index/raspberry.png" width="181" height="284" alt="Свежие ягоды малины в вафельном стаканчике">
+              <img class="raspberry-free-image" src="img/index/raspberry.png" width="181" height="240" alt="Свежие ягоды малины в вафельном стаканчике">
             </div>
           </div>
 
@@ -181,7 +181,7 @@
             </div>
 
             <div class="gift-right-inner-column right-container">
-              <img class="marshmallow-free-image" src="img/index/marshmallow.png" width="232" height="359" alt="Кусочки зефира в вафельном стаканчике">
+              <img class="marshmallow-free-image" src="img/index/marshmallow.png" width="232" height="249" alt="Кусочки зефира в вафельном стаканчике">
             </div>
           </div>
         </div>
@@ -195,8 +195,10 @@
         <ul class="bestchoice-list">
           <li class="bestchoice-list-item">
             <div class="flypage">
-              <h5>Малинка</h5>
-              <img class="product-card-image" src="img/index/raspberry_round.jpg" width="168" height="168" alt="Шарик сливочного мороженого с малиновым джемом">
+              <a class="product-card-link"> 
+                <h5>Малинка</h5>
+                <img class="product-card-image" src="img/index/raspberry_round.jpg" width="168" height="168" alt="Шарик сливочного мороженого с малиновым джемом">
+              </a>
               <p>Сливочное мороженое с малиновым джемом</p>
               <div class="price-n-button-wrap">
                 <span class="price">310 ₽/кг</span>
@@ -209,8 +211,10 @@
 
           <li class="bestchoice-list-item">
             <div class="flypage">
-              <h5>Фисташка</h5>
-              <img class="product-card-image" src="img/index/pistachio_round.jpg" width="168" height="168" alt="Шарик фисташкового мороженого с кусочками шоколада">
+              <a class="product-card-link"> 
+                <h5>Фисташка</h5>
+                <img class="product-card-image" src="img/index/pistachio_round.jpg" width="168" height="168" alt="Шарик фисташкового мороженого с кусочками шоколада">
+              </a> 
               <p>Фисташковый пломбир с кусочками шоколада</p>
               <div class="price-n-button-wrap">
                 <span class="price">340 ₽/кг</span>
@@ -223,8 +227,10 @@
 
           <li class="bestchoice-list-item">
             <div class="flypage">
-              <h5>Черника</h5>
-              <img class="product-card-image" src="img/index/blueberry_round.jpg" width="168" height="168" alt="Шарик мороженого крем-брюле с черничным джемом">
+              <a class="product-card-link"> 
+                <h5>Черника</h5>
+                <img class="product-card-image" src="img/index/blueberry_round.jpg" width="168" height="168" alt="Шарик мороженого крем-брюле с черничным джемом">
+              </a>
               <p>Крем-брюле<br>
                 с черничным джемом</p>
               <div class="price-n-button-wrap">
@@ -239,8 +245,10 @@
 
           <li class="bestchoice-list-item">
             <div class="flypage">
-              <h5>Бабл-гам</h5>
-              <img class="product-card-image" src="img/index/bubble_gum_round.jpg" width="168" height="168" alt="Шарик ванильного пломбира со сладкой посыпкой">
+              <a class="product-card-link"> 
+                <h5>Бабл-гам</h5>
+                <img class="product-card-image" src="img/index/bubble_gum_round.jpg" width="168" height="168" alt="Шарик ванильного пломбира со сладкой посыпкой">
+              </a>
               <p>Ванильный пломбир<br>
                 со сладкой посыпкой</p>
               <div class="price-n-button-wrap">
@@ -296,7 +304,7 @@
             <p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
 
             <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-              <label for="subscription-email">Email</label>
+              <span class="visually-hidden">Email</span>
               <input class="field" placeholder="email.example.com" type="email" name="subscription-email" id="subscription-email" required>
               <button class="button send-button subscription-button" type="submit"><span class="send-subscription-data">Отправить</span></button>
             </form>
@@ -314,21 +322,31 @@
             <p class="delivery-prompting">Хочется полакомиться любимым дессертом, но нет времени съездить в магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
           </div>
 
-          <div class="delivery delivery-data">
+          <div class="delivery-data">
             <p class="delivery-tip">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
             <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
               <p class="delivery-date-form">
-                <label for="delivery-date">Дата</label>
+                <label for="delivery-date">
+                  Дата
+                  <button class="info">
+                    <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                  </button>
+                </label>
                 <input type="text" name="delivery-date" id="delivery-date" placeholder="01.04.2020">
               </p>
 
               <p class="delivery-phone-form">
-                <label for="delivery-recipient_phone">Телефон</label>
-                <input type="text" name="delivery-recipient_phone" id="delivery-recipient_phone" placeholder="+7 800 999-00-00">
+                <label for="delivery-recipient-phone">Телефон</label>
+                <input type="text" name="delivery-recipient-phone" id="delivery-recipient-phone" placeholder="+7 800 999-00-00">
               </p>
             
               <p class="delivery-address-form">
-                <label for="delivery-recipient-address">Адрес</label>
+                <label for="delivery-recipient-address">
+                  Адрес
+                  <button class="info">
+                    <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                  </button>
+                </label>
                 <input type="text" name="delivery-recipient-address" id="delivery-recipient-address" placeholder="ул. Большая Конюшенная, 19/8">
               </p>
 
