@@ -6,20 +6,18 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header"> 
       <nav class="navigation">
 
         <div class="logo-wrap">
-          <a class="navigation-link logo-link" href="index.html">
-            <img class="logo" src="img/index/logo.svg" width="157" height="56" alt="GllacyShop">
+          <a class="navigation-link logo-link" href="">
+            <img class="logo" src="img/index/logo.svg" width="137" height="56" alt="GllacyShop">
           </a>
         </div>
 
       <ul class="navigation-list">
         <li class="navigation-item">
-          <div class="current-nav-link-wrap">
-            <a class="navigation-link navigation-link-current" href="catalog.html">Каталог</a>
-          </div>
+          <a class="navigation-link navigation-link-current" href="catalog.html">Каталог</a>
         </li>
         <li class="navigation-item">
           <a class="navigation-link" href="#">Доставка и оплата</a>
@@ -35,21 +33,27 @@
           <a class="phone" href="tel:88005558628">+7 800 555-86-28</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link search-link" href="#">
+          <a class="search-link" href="#">
             <span class="visually-hidden">Поиск</span>
-            <img class="user-navigation-icon" src="img/index/search.svg" width="18" height="18" alt="Иконка поиска">
+            <svg  class="navigation-icon" area-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M2.913 8.246a5.333 5.333 0 1 1 9.17 3.705.655.655 0 0 0-.132.132 5.333 5.333 0 0 1-9.038-3.837Zm9.552 5.162a6.667 6.667 0 1 1 .943-.943l2.81 2.81a.667.667 0 0 1-.943.943l-2.81-2.81Z"/>
+            </svg>
           </a>
         </li>
         <li class="navigation-item icon-n-text-link">
-          <a class="navigation-link" href="#">
-            <img class="user-navigation-icon" src="img/index/log_in.svg" width="18" height="18" alt="Иконка входа в личный кабинет">
+          <a class="nav-login-link" href="#">
+            <svg class="navigation-icon" area-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M10.208 1.875c0-.368.299-.667.667-.667h3a2.167 2.167 0 0 1 2.167 2.167v10.5a2.167 2.167 0 0 1-2.167 2.167h-3a.667.667 0 0 1 0-1.334h3a.834.834 0 0 0 .833-.833v-10.5a.833.833 0 0 0-.833-.833h-3a.667.667 0 0 1-.667-.667ZM6.654 4.404c.26-.26.682-.26.942 0l3.746 3.745a.664.664 0 0 1 0 .952l-3.746 3.745a.667.667 0 1 1-.942-.942l2.612-2.612H1.875a.667.667 0 0 1 0-1.334h7.39L6.655 5.346a.667.667 0 0 1 0-.942Z"/>
+            </svg>
             <span class="log-in">Вход</span>            
           </a>
         </li>
         <li class="navigation-item icon-n-text-link">
-          <a class="navigation-link" href="#">
-            <img class="user-navigation-icon" src="img/index/navigation_cart.svg" width="18" height="18" alt="Иконка корзины">
+          <a class="nav-cart-link" href="#">
             <span class="visually-hidden">Корзина</span>
+            <svg class="navigation-icon" area-hidden="true" focusable="false" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M1.313.49a.667.667 0 0 0 0 1.333h2.06l.54 2.696a.662.662 0 0 0 .011.056l1.09 5.44a1.97 1.97 0 0 0 1.962 1.586h6.325a1.97 1.97 0 0 0 1.963-1.586l.001-.005 1.043-5.47a.667.667 0 0 0-.655-.791H5.12l-.545-2.724A.667.667 0 0 0 3.92.49H1.313ZM6.32 9.754l-.935-4.672h9.462l-.892 4.675a.637.637 0 0 1-.636.51H6.958a.637.637 0 0 1-.637-.512v-.001Zm-1.11 4.44a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Zm7.17 0a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Z"/>
+            </svg>
             <span class="cart-status">Пусто</span>
           </a>
         </li>
@@ -175,6 +179,9 @@
                       <span class="price">310 ₽/кг</span>
                       <button class="add-to-cart" type="button">
                         <span class="visually-hidden">Добавить в корзину</span>
+                        <svg class="pink-cart-svg" area-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.167 9.25a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.656.656 0 0 0 .011.053l.967 4.833a1.826 1.826 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792h-9.303l-.473-2.361a.667.667 0 0 0-.654-.536H9.167Zm4.524 8.294-.813-4.064h8.23l-.775 4.067a.492.492 0 0 1-.492.395H14.183a.493.493 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z" />
+                        </svg>
                       </button>
                     </div>
                   </div>
@@ -191,6 +198,9 @@
                       <span class="price">340 ₽/кг</span>
                       <button class="add-to-cart" type="button">
                         <span class="visually-hidden">Добавить в корзину</span>
+                        <svg class="pink-cart-svg" area-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.167 9.25a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.656.656 0 0 0 .011.053l.967 4.833a1.826 1.826 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792h-9.303l-.473-2.361a.667.667 0 0 0-.654-.536H9.167Zm4.524 8.294-.813-4.064h8.23l-.775 4.067a.492.492 0 0 1-.492.395H14.183a.493.493 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z" />
+                        </svg>
                       </button>
                     </div>
                   </div>
@@ -207,6 +217,9 @@
                       <span class="price">330 ₽/кг</span>
                       <button class="add-to-cart" type="button">
                         <span class="visually-hidden">Добавить в корзину</span>
+                        <svg class="pink-cart-svg" area-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.167 9.25a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.656.656 0 0 0 .011.053l.967 4.833a1.826 1.826 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792h-9.303l-.473-2.361a.667.667 0 0 0-.654-.536H9.167Zm4.524 8.294-.813-4.064h8.23l-.775 4.067a.492.492 0 0 1-.492.395H14.183a.493.493 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z" />
+                        </svg>
                       </button>
                     </div>
                   </div>
@@ -223,6 +236,9 @@
                       <span class="price">320 ₽/кг</span>
                       <button class="add-to-cart" type="button">
                         <span class="visually-hidden">Добавить в корзину</span>
+                        <svg class="pink-cart-svg" area-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.167 9.25a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.656.656 0 0 0 .011.053l.967 4.833a1.826 1.826 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792h-9.303l-.473-2.361a.667.667 0 0 0-.654-.536H9.167Zm4.524 8.294-.813-4.064h8.23l-.775 4.067a.492.492 0 0 1-.492.395H14.183a.493.493 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z" />
+                        </svg>
                       </button>
                     </div>
                   </div>
@@ -239,6 +255,9 @@
                       <span class="price">330 ₽/кг</span>
                       <button class="add-to-cart" type="button">
                         <span class="visually-hidden">Добавить в корзину</span>
+                        <svg class="pink-cart-svg" area-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.167 9.25a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.656.656 0 0 0 .011.053l.967 4.833a1.826 1.826 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792h-9.303l-.473-2.361a.667.667 0 0 0-.654-.536H9.167Zm4.524 8.294-.813-4.064h8.23l-.775 4.067a.492.492 0 0 1-.492.395H14.183a.493.493 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z" />
+                        </svg>
                       </button>
                     </div>
                   </div>
@@ -255,6 +274,9 @@
                       <span class="price">340 ₽/кг</span>
                       <button class="add-to-cart" type="button">
                         <span class="visually-hidden">Добавить в корзину</span>
+                        <svg class="pink-cart-svg" area-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.167 9.25a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.656.656 0 0 0 .011.053l.967 4.833a1.826 1.826 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792h-9.303l-.473-2.361a.667.667 0 0 0-.654-.536H9.167Zm4.524 8.294-.813-4.064h8.23l-.775 4.067a.492.492 0 0 1-.492.395H14.183a.493.493 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z" />
+                        </svg>
                       </button>
                     </div>
                   </div>
@@ -271,6 +293,9 @@
                       <span class="price">270 ₽/кг</span>
                       <button class="add-to-cart" type="button">
                         <span class="visually-hidden">Добавить в корзину</span>
+                        <svg class="pink-cart-svg" area-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.167 9.25a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.656.656 0 0 0 .011.053l.967 4.833a1.826 1.826 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792h-9.303l-.473-2.361a.667.667 0 0 0-.654-.536H9.167Zm4.524 8.294-.813-4.064h8.23l-.775 4.067a.492.492 0 0 1-.492.395H14.183a.493.493 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z" />
+                        </svg>
                       </button>
                     </div>
                   </div>
@@ -287,6 +312,9 @@
                       <span class="price">300 ₽/кг</span>
                       <button class="add-to-cart" type="button">
                         <span class="visually-hidden">Добавить в корзину</span>
+                        <svg class="pink-cart-svg" area-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.167 9.25a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.656.656 0 0 0 .011.053l.967 4.833a1.826 1.826 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792h-9.303l-.473-2.361a.667.667 0 0 0-.654-.536H9.167Zm4.524 8.294-.813-4.064h8.23l-.775 4.067a.492.492 0 0 1-.492.395H14.183a.493.493 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z" />
+                        </svg>
                       </button>
                     </div>
                   </div>
@@ -303,6 +331,9 @@
                       <span class="price">310 ₽/кг</span>
                       <button class="add-to-cart" type="button">
                         <span class="visually-hidden">Добавить в корзину</span>
+                        <svg class="pink-cart-svg" area-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.167 9.25a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.656.656 0 0 0 .011.053l.967 4.833a1.826 1.826 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792h-9.303l-.473-2.361a.667.667 0 0 0-.654-.536H9.167Zm4.524 8.294-.813-4.064h8.23l-.775 4.067a.492.492 0 0 1-.492.395H14.183a.493.493 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z" />
+                        </svg>
                       </button>
                     </div>
                   </div>
@@ -319,6 +350,9 @@
                       <span class="price">320 ₽/кг</span>
                       <button class="add-to-cart" type="button">
                         <span class="visually-hidden">Добавить в корзину</span>
+                        <svg class="pink-cart-svg" area-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.167 9.25a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.656.656 0 0 0 .011.053l.967 4.833a1.826 1.826 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792h-9.303l-.473-2.361a.667.667 0 0 0-.654-.536H9.167Zm4.524 8.294-.813-4.064h8.23l-.775 4.067a.492.492 0 0 1-.492.395H14.183a.493.493 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z" />
+                        </svg>
                       </button>
                     </div>
                   </div>
@@ -335,6 +369,9 @@
                       <span class="price">360 ₽/кг</span>
                       <button class="add-to-cart" type="button">
                         <span class="visually-hidden">Добавить в корзину</span>
+                        <svg class="pink-cart-svg" area-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.167 9.25a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.656.656 0 0 0 .011.053l.967 4.833a1.826 1.826 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792h-9.303l-.473-2.361a.667.667 0 0 0-.654-.536H9.167Zm4.524 8.294-.813-4.064h8.23l-.775 4.067a.492.492 0 0 1-.492.395H14.183a.493.493 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z" />
+                        </svg>
                       </button>
                     </div>
                   </div>
@@ -351,6 +388,9 @@
                       <span class="price">280 ₽/кг</span>
                       <button class="add-to-cart" type="button">
                         <span class="visually-hidden">Добавить в корзину</span>
+                        <svg class="pink-cart-svg" area-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.167 9.25a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.656.656 0 0 0 .011.053l.967 4.833a1.826 1.826 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792h-9.303l-.473-2.361a.667.667 0 0 0-.654-.536H9.167Zm4.524 8.294-.813-4.064h8.23l-.775 4.067a.492.492 0 0 1-.492.395H14.183a.493.493 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z" />
+                        </svg>
                       </button>
                     </div>
                   </div>
