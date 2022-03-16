@@ -1525,6 +1525,8 @@ body {
     width: 807px;
 }
 
+/*Select*/
+
 .select-control {
     border-width: 0;
     border-radius: 20px;
@@ -1541,6 +1543,8 @@ body {
     background-color: rgba(252, 252, 252, 0.3);
 
 }
+
+/*Range*/
 
 .range {
     display: grid; /*не получается правильно отформатировать эту часть формы. inputs с ценой не переставляются наверх*/
@@ -1643,11 +1647,7 @@ body {
 
   
 
-
-
-
-
-  /*Чекбоксы*/
+  /*Checkboxs*/
 
 .control {
     position: relative;
@@ -1699,7 +1699,7 @@ body {
 
 
 
-/*Радио*/
+/*Radio*/
 .control-input[type="radio"] + .control-mark {
     position: absolute;
     top: 2px;
