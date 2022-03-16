@@ -81,6 +81,7 @@ body {
 }
 
 .user-navigation {
+    justify-content: flex-end;
     max-width: 452px;
     margin-left: auto;
     margin-top: 36px;
@@ -90,6 +91,7 @@ body {
 .logo-wrap {
     padding: 24px 16px 24px 0;
     margin: 0;
+    border-radius: 26px;
 }
 
 .logo {
@@ -152,6 +154,7 @@ body {
 .navigation-link:focus {
     background-color: rgba(252, 252, 252, 0.5);
     box-shadow: 0 0 0 2px #2D3440;
+    outline: none;
 
 }
 
@@ -170,18 +173,23 @@ body {
     background-color: #FCFCFC;
     box-shadow:none;
     color: #2D3440;
+    outline: none;
 }
-
 
 
 .logo-link {
     margin: 0; 
     padding: 0; 
+    text-decoration: none;
 }
 
-.logo-link:hover, .logo-link:focus, .logo-link:active { /*все равно подсвечивается при наведении курсором или нажатии */
+.logo-link:hover, .logo-link:focus, .logo-link:active { 
     box-shadow: none;
     background-color: none;
+}
+
+.logo-link:focus {
+    outline: 2px solid #2D3440; 
 }
 
 .user-navigation>li {
@@ -203,7 +211,13 @@ body {
     text-decoration: none;
     padding-top: 8px;
     padding-bottom: 8px;
+    border-radius: 26px;
 }
+
+.phone:focus{
+    outline: 2px solid #2D3440;
+}
+
 
 .search-link {
     display: block;
@@ -237,13 +251,12 @@ body {
 }*/
 
 .icon-n-text-link a {
-    display: flex;  /*не получается нормально выровнять меню ни с display: flex ни с display: block */
+    display: flex;  
     position: relative;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
     color: #2D3440;
-    height: 32px;
     background-color: rgba(252, 252, 252, 0.3);  
     border-radius: 26px;
     padding: 6px 16px;
@@ -256,12 +269,14 @@ body {
 
 .icon-n-text-link a:hover, .search-link:hover {
     background-color: rgba(252, 252, 252, 0.5);
+    
 
 }
 
 .icon-n-text-link a:focus, .search-link:focus {
     background-color: rgba(252, 252, 252, 0.5);
     box-shadow: 0 0 0 2px #2D3440;
+    outline: none;
 
 }
 
@@ -269,6 +284,7 @@ body {
     background-color: #FCFCFC;
     box-shadow: none;
 }
+
 
 
 
@@ -364,6 +380,7 @@ body {
 .slider-button:focus {
     background-color: rgba(252, 252, 252, 0.3);
     box-shadow: inset 0 0 0 2px #2D3440;
+    outline: none;
 
 }
 
@@ -468,10 +485,24 @@ body {
     cursor: pointer; 
     border-width: 0;
     background-color: #FCFCFC;
-    outline: 4px solid rgba(252, 252, 252, 0.4);
+    /*outline: 4px solid rgba(252, 252, 252, 0.4);*/
     border-radius: 26px; 
-    box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.1);
+    box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.1), 0 0 0 4px rgba(252, 252, 252, 0.4);
 
+}
+
+.order-now.spinner {
+    padding-right: 56px;
+}
+
+.order-now.spinner::after { /*справа остается больше паддинг, чем на макете*/
+    display: inline-block;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/index/white_spinner.svg");
+    background-repeat: no-repeat;
+    margin-left: 8px;
 }
 
 .pagination-show-more {
@@ -480,23 +511,41 @@ body {
     margin-right: auto;
 }
 
+.pagination-show-more.spinner {
+    padding-right: 56px;
+}
+
+.pagination-show-more.spinner::after { /*справа остается больше паддинг, чем на макете*/
+    display: inline-block;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/index/black_spinner.svg");
+    background-repeat: no-repeat;
+    margin-left: 8px;
+}
+
+
+
 .order-now:hover, .pagination-show-more:hover {
     background-color: rgba(252, 252, 252, 0.4);
-    outline: 4px solid #FCFCFC;
-    box-shadow: 0 4px 15px 0 rgba(133, 133, 133, 0.15);
+    /*outline: 4px solid #FCFCFC;*/
+    box-shadow: 0 4px 15px 0 rgba(133, 133, 133, 0.15), 0 0 0 4px #FCFCFC;
 
 }
 
 .order-now:focus, .pagination-show-more:focus {
-    outline: 2px solid #2D3440; /*есть небольшой зазор между outline и белой подложкой кнопки*/
+    /*outline: 2px solid #2D3440; есть небольшой зазор между outline и белой подложкой кнопки*/
     background-color: #FCFCFC;
-    box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.1);
+    box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.1), 0 0 0 2px #2D3440;
+    outline: none;
 }
 
 .order-now:disabled, .pagination-show-more:disabled {
     color: #B9B9B9;
     background-color: #E7E7E7;
-    outline: 4px solid rgba(252, 252, 252, 0.4);
+    /*outline: 4px solid rgba(252, 252, 252, 0.4);*/
+    box-shadow: 0 0 0 4px rgba(252, 252, 252, 0.4);
 
 }
 
@@ -573,6 +622,11 @@ body {
 .slider-circle-link:focus .tiny-circle {
     background-color: rgba(252, 252, 252, 0.3);
     box-shadow: inset 0 0 0 1px #2D3440;
+    outline: none;
+}
+
+.slider-circle-link:focus {
+    outline: none;
 }
 
 .current-circle>.tiny-circle {
@@ -640,12 +694,17 @@ body {
 }
 
 .social-media-link:hover .soc-icon {
-    background-color: #2D3440;  /*появляется очень тонкая некрасивая черная рамочка по краям*/
+    background-color: #2D3440; 
 }
 
 .social-media-link:focus .soc-icon {
     background-color: #2D3440;
     box-shadow: 0 0 0 2px #2D3440;
+    
+}
+
+.social-media-link:focus {
+    outline: none;
 }
 
 
@@ -884,7 +943,8 @@ body {
 .add-to-cart:focus {
     background-color: #FF2F64;
     box-shadow: inset 0 0 0 2px #2D3440;
-    border-width: 0; /* откуда-то берется двойная рамка у кнопки в этом режиме?*/
+    border-width: 0; 
+    outline: none;
 
 }
 
@@ -959,13 +1019,53 @@ body {
     padding-left: 64px;
 }
 
-.strong-points-item:nth-child(1) p::before {  /*ничего не отображается*/
+.ice-cream::before {  
     position: absolute;
+    width: 48px;
+    height: 48px;
     top: 0;
     left: 0;
     content: "";
-    background-image: url("../img/index/ice_cream_icon2.svg");
-    background-size: 48px 48px;
+    background-image: url("../img/index/ice_cream_icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.leaf::before {  
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 0;
+    left: 0;
+    content: "";
+    background-image: url("../img/index/leaf.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.cow::before {  
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 0;
+    left: 0;
+    content: "";
+    background-image: url("../img/index/cow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.temperature::before {  
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 0;
+    left: 0;
+    content: "";
+    background-image: url("../img/index/thermometer.svg");
     background-repeat: no-repeat;
     background-position: center;
 
@@ -1013,18 +1113,22 @@ body {
 
 .subscription {
     display: flex;
+    box-sizing: border-box;
     align-items: stretch;
     background-image: url('../img/index/post_stripes_optimized.jpg');
     width: 570px;
     border-radius: 16px;
     margin-left: auto;
     padding: 6px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .subscription-inner-wrap {
     display: flex;
     flex-direction: column;
     background-color: #FCFCFC;
+    box-sizing: border-box;
     width: 558px;
     padding: 26px;
     border-radius: 16px;
@@ -1038,6 +1142,15 @@ body {
     padding: 0;
 }
 
+.subscription-form {  
+    display: grid;
+    width: 508px;
+    grid-template-columns: 332px 152px;
+    column-gap: 24px;
+    padding: 0;
+    margin: 0;
+}
+
 .send-button {
     display: inline-block;
     background-color: #FF2F64;
@@ -1045,7 +1158,7 @@ body {
     /*width: 152px;*/
     height: 44px;
     border-width: 0;
-    outline: 4px solid rgba(255, 47, 100, 0.3);
+    /*outline: 4px solid rgba(255, 47, 100, 0.3);*/
     border-radius: 26px;
     font-family: inherit;
     font-size: 16px;
@@ -1053,7 +1166,8 @@ body {
     font-weight: 700;
     text-align: center;
     padding: 12px 32px 12px 32px;
-    box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.1);
+    margin: 0;
+    box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.1), 0 0 0 4px rgba(255, 47, 100, 0.3);
 
 }
 
@@ -1067,22 +1181,20 @@ body {
 
 .send-button:focus {
     color: #FCFCFC;
-    box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.1);
+    box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.1), 0 0 0 2px #2D3440;
     background-color: #FF2F64;
-    outline: 2px solid #2D3440;
+    /*outline: 2px solid #2D3440;*/
+    outline: none;
 
 }
 
 .send-button:disabled {
     color: #565C66;
-    box-shadow: none;
+    box-shadow: 0 0 0 4px rgba(185, 185, 185, 0.3);
     background-color: #B9B9B9;
-    outline: 4px solid rgba(185, 185, 185, 0.3);
+    /*outline: 4px solid rgba(185, 185, 185, 0.3);*/
 
-}
 
-.subscription-button {
-    margin-left: 24px;
 }
 
 /* доставка */
@@ -1149,7 +1261,7 @@ body {
 
 }
 
-.delivery-form {  /* почему-то наехали поля формы друг на друга*/
+.delivery-form {  
     display: grid;
     width: 420px;
     grid-template-columns: 117px 287px;
@@ -1161,6 +1273,7 @@ body {
 
 
 .delivery-date-form, .delivery-phone-form, .delivery-address-form {
+    position: relative;
     font-size: 16px;
     font-weight: 700;
     line-height: 20px;
@@ -1168,7 +1281,7 @@ body {
     margin: 0;
 }
 
-.delivery-date {
+.delivery-date-form {
     grid-column: 1/2;
     width: 117px;
     display: flex;
@@ -1186,6 +1299,37 @@ body {
     display: flex;
     flex-direction: column;
     margin-bottom: 12px;
+}
+
+.delivery-date-form>label, .delivery-phone-form>label, .delivery-address-form>label {
+    margin-bottom: 8px;
+}
+
+.field {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #B9B9B9;
+    padding: 14px 16px 14px 16px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #B9B9B9;
+}
+
+.info {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    margin-top: 3px;
+    margin-bottom: 11px;
+    margin-left: 5.5px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    background-image: url("../img/index/info.svg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 
@@ -1367,13 +1511,18 @@ body {
     font-weight: 700;
     color: #2D3440;
     margin-right: 28px;
-
    
 }
 
 
 .breadcrumbs-current {
     text-decoration: none;
+}
+
+.product-filters { /*не работает - в браузере отображается как display: block*/
+    display: flex;
+    flex-wrap: wrap;
+    width: 807px;
 }
 
 .select-control {
@@ -1392,6 +1541,195 @@ body {
     background-color: rgba(252, 252, 252, 0.3);
 
 }
+
+.range {
+    display: grid; /*не получается правильно отформатировать эту часть формы. inputs с ценой не переставляются наверх*/
+    height: 44px;
+    width: 196px;
+    box-sizing: border-box;
+    grid-template-rows: 20px  36px;
+    row-gap: 8px;
+}
+
+
+.range-scale {
+    grid-row: 2/3;
+    position: relative;
+    width: 164px;
+    height: 2px;
+    background-color: rgba(86, 92, 102, 0.3);
+    border-radius: 2px; /*по картинке вижу, что небольшое скругление есть, но саму цифру скругления не нашла*/
+
+}
+
+.range-bar {
+    position: absolute;
+    height: 2px;
+    background-color: #565C66;
+}
+
+.range-wrapper-inputs {
+    grid-row: 1/2;
+    display: flex;
+    justify-content:  center;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #2D3440;
+}
+
+.catalog-filter-label {
+    display: flex;
+    margin-left: 16px;
+  }
+  
+  .range-input {
+    width: 30px; /*откуда взять это значение?*/
+    padding: 0 2px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    color: #2D3440;
+    appearance: textfield;
+  }
+  
+  .range-input::-webkit-outer-spin-button,
+  .range-input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+.range-toggle {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #FCFCFC;
+    border-radius: 50%;
+    border-width: 0;
+    box-shadow: inset 0 0 0 6px #2D3440;
+    cursor: pointer;
+
+  }
+  
+  .range-toggle:hover {
+    background-color: #2D3440;
+    box-shadow: inset 0 0 0 6px #FCFCFC;
+    ;
+  }
+  
+  .range-toggle:active {
+    background-color: #2D3440;
+    outline: none;
+  }
+
+  .range-toggle:focus {
+    background-color: #2D3440;
+    box-shadow: inset 0 0 0 6px #FCFCFC, inset 0 0 0 2px 2D3440; /*можно так накладывать одну тень на другую?*/
+  } 
+
+  .toggle-min {
+    top: -8px;
+    left: -8px;
+  }
+  
+  .toggle-max {
+    top: -8px;
+    right: -8px;
+  }
+
+  
+
+
+
+
+
+  /*Чекбоксы*/
+
+.control {
+    position: relative;
+    display: block;
+    padding-left: 24px;
+}
+  
+.control-mark {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/catalog/empty_checkbox.svg");
+    border-width: 0; /*все равно видна какая-то рамка*/
+}
+
+.control-input:hover .control-mark {
+    border-width: 0;
+    background-image: url("../img/catalog/white_empty_checkbox.svg");
+}
+  
+.control-input:disabled + .control-mark {
+    border-width: 0; 
+    background-image: url("../img/catalog/empty_checkbox.svg");
+    opacity: 0.4;
+
+}
+
+.control-input:active .control-mark {
+      border-width: 0;
+}
+
+.control-input[type="checkbox"]:checked .control-mark{
+      border-width: 0;
+
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {     
+      position: absolute;
+      top: -1;
+      left: -2;
+      content: "";
+      width: 16px;
+      height: 16px;
+      background-image: url("../img/catalog/check.svg");
+      background-repeat: no-repeat;
+}
+
+
+
+/*Радио*/
+.control-input[type="radio"] + .control-mark {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/catalog/radio_off.svg");
+    background-repeat: no-repeat;
+}
+  
+
+.control-input[type="radio"]:checked + .control-mark::before {
+    position: absolute;
+    top: 2px;
+    left: 0px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    content: "";
+    background-image: url("../img/catalog/radio_on.svg");
+    background-repeat: no-repeat;
+  }
+
+  .control-label {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+  }
+
+
 
 .catalog-filter {
     margin-bottom: 99px;
@@ -1469,24 +1807,27 @@ body {
     width: 187px;
     height: 36px;
     border-width: 0;
-    outline: 2px solid #FCFCFC;
+    /*outline: 2px solid #FCFCFC;*/
     border-radius: 26px;
     font-family: inherit;
     font-size: 14px;
     line-height: 20px;
     font-weight: 700;
     text-align: center;
+    box-shadow: 0 0 0 2px #FCFCFC;
 
 }
 
 .apply-button:hover {
     background-color: #FCFCFC;
-    outline: 2px solid rgba(252, 252, 252, 0.3);
+    /*outline: 2px solid rgba(252, 252, 252, 0.3);*/
+    box-shadow: 0 0 0 2px rgba(252, 252, 252, 0.3);
 }
 
 .apply-button:focus {
     background-color: rgba(252, 252, 252, 0.3);
-    outline: 2px solid #2D3440;
+    /*outline: 2px solid #2D3440;*/
+    box-shadow: 0 0 0 2px #2D3440;
 }
 
 .apply-button:disabled {
@@ -1569,4 +1910,5 @@ body {
 .pagination-link:focus {
     background-color: rgba(252, 252, 252, 0.3);
     box-shadow: inset 0 0 0 1px #2D3440;
+    outline: none;
 }
