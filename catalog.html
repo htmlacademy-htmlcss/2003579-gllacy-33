@@ -10,7 +10,7 @@
       <nav class="navigation">
 
         <div class="logo-wrap">
-          <a class="navigation-link logo-link" href="">
+          <a class="logo-link" href="">
             <img class="logo" src="img/index/logo.svg" width="137" height="56" alt="GllacyShop">
           </a>
         </div>
@@ -88,84 +88,123 @@
         <section class="products-filters">
             <h2 class="visually-hidden">Список товаров с фильтрами</h2>
 
-            <select class="select-control" area-label="Сортировка">
-                <option value="popular">по популярности</option>
-                <option value="cheap-first">по увеличению цены</option>
-                <option value="expensive-first">по убыванию цены</option>
-            </select>
+            
 
-            <!--ПОЗЖЕ ВСТАВИТЬ СЮДА СЛАЙДЕР ЦЕНЫ-->
+              <select class="select-control" area-label="Сортировка">
+                  <option value="popular">по популярности</option>
+                  <option value="cheap-first">по увеличению цены</option>
+                  <option value="expensive-first">по убыванию цены</option>
+              </select>
 
-            <form class="catalog-filter" action="https://echo.htmlacademy.ru" method="get">
-                <fieldset class="catalog-filter-group fat-content">
-                    <legend class="catalog-filter-title fat-content-title">Жирность:</legend>
-                    <ul class="catalog-filter-list fat-content-list">
-                        <li class="catalog-filter-item fat-content-list-item">
-                          <label class="control">
-                           <input class="control-input" type="checkbox" name="zero-percent">
-                            0%
-                          </label>   
-                        </li>
-                        <li class="catalog-filter-item fat-content-list-item">
-                            <label class="control">
-                             <input class="control-input" type="checkbox" name="ten-percent" checked>
-                              10%
-                            </label>   
-                        </li>
-                        <li class="catalog-filter-item fat-content-list-item">
-                            <label class="control">
-                             <input class="control-input" type="checkbox" name="lower-than-thirty-percent">
-                              до 30%
-                            </label>   
-                        </li>
-                        <li class="catalog-filter-item fat-content-list-item">
-                            <label class="control">
-                             <input class="control-input" type="checkbox" name="higher-than-thirty-percent">
-                              выше 30%
-                            </label>   
-                        </li>
-                    </ul>
-                </fieldset>
+              <!--СЛАЙДЕР ЦЕНЫ-->
+              <div class="range">
 
+                <div class="range-scale">
+                  <div class="range-bar" style="left: 24px; width: 72px">
+                    <button class="range-toggle toggle-min">
+                      <span class="visually-hidden">Изменить минимальную цену.</span>
+                    </button>
+                    <button class="range-toggle toggle-max">
+                      <span class="visually-hidden">Изменить максимальную цену.</span>
+                    </button>
+                  </div>
+
+                  <div class="range-wrapper-inputs">
+                    <label class="catalog-filter-label">
+                      Цена: <input class="range-input" type="number" value="100" name="min-price"> ₽
+                    </label>
+                    <label class="catalog-filter-label">
+                    - <input class="range-input" type="number" value="500" name="max-price" style="width: 44px"> ₽
+                    </label>
+                  </div>
+                </div>              
+              </div>
+
+              <!--РАДИО-->
+
+              <form class="catalog-filter" action="https://echo.htmlacademy.ru" method="get">
+                  <fieldset class="catalog-filter-group fat-content">
+                      <legend class="catalog-filter-title fat-content-title">Жирность:</legend>
+                      <ul class="catalog-filter-list fat-content-list">
+                          <li class="catalog-filter-item fat-content-list-item">
+                            <label class="control">
+                              <input class="visually-hidden control-input" type="radio" name="zero-percent">
+                              <span class="control-mark"></span>
+                              <span class="control-label">0%</span>
+                            </label>   
+                          </li>
+                          <li class="catalog-filter-item fat-content-list-item">
+                              <label class="control">
+                               <input class="visually-hidden control-input" type="radio" name="ten-percent" checked>
+                               <span class="control-mark"></span>
+                               <span class="control-label">10%</span>
+                              </label>   
+                          </li>
+                          <li class="catalog-filter-item fat-content-list-item">
+                              <label class="control">
+                               <input class="visually-hidden control-input" type="radio" name="lower-than-thirty-percent">
+                               <span class="control-mark"></span>
+                               <span class="control-label">до 30%</span>
+                              </label>   
+                          </li>
+                          <li class="catalog-filter-item fat-content-list-item">
+                              <label class="control">
+                               <input class="visually-hidden control-input" type="radio" name="higher-than-thirty-percent">
+                               <span class="control-mark"></span>
+                               <span class="control-label">выше 30%</span>                              
+                              </label>   
+                          </li>
+                      </ul>
+                  </fieldset>
+            
+
+            
                 <fieldset class="catalog-filter-group filling-filter">
                     <legend class="catalog-filter-title filling-title">Наполнители:</legend>
                     <ul class="catalog-filter-list filling-list">
                         <li class="catalog-filter-item">
                           <label class="control">
-                           <input class="control-input" type="checkbox" name="chocolate" checked>
-                            шоколадные
+                           <input class="visually-hidden control-input" type="checkbox" name="chocolate" checked>
+                           <span class="control-mark"></span>
+                           <span class="control-label">шоколадные</span>                      
                           </label>   
                         </li>
                         <li class="catalog-filter-item">
                             <label class="control">
-                             <input class="control-input" type="checkbox" name="sugar-toppings" checked>
-                              сахарные посыпки
+                             <input class="visually-hidden control-input" type="checkbox" name="sugar-toppings" checked>
+                             <span class="control-mark"></span>
+                             <span class="control-label">сахарные посыпки</span>                                
                             </label>   
                         </li>
                         <li class="catalog-filter-item">
                             <label class="control">
-                             <input class="control-input" type="checkbox" name="fruits">
-                              фрукты
+                             <input class="visually-hidden control-input" type="checkbox" name="fruits">
+                             <span class="control-mark"></span>
+                             <span class="control-label">фрукты</span>                                
                             </label>   
                         </li>
                         <li class="catalog-filter-item">
                             <label class="control">
-                             <input class="control-input" type="checkbox" name="syrops">
-                              сиропы
+                             <input class="visually-hidden control-input" type="checkbox" name="syrops">
+                             <span class="control-mark"></span>
+                             <span class="control-label">сиропы</span>                                
                             </label>   
                         </li>
                         <li class="catalog-filter-item">
                             <label class="control">
-                             <input class="control-input" type="checkbox" name="jams">
-                              джемы
+                             <input class="visually-hidden control-input" type="checkbox" name="jams">
+                             <span class="control-mark"></span>
+                             <span class="control-label">джемы</span>  
                             </label>   
                         </li>
                     </ul>
                 </fieldset>
 
                 <button class="button apply-button" type="sumbmit">Применить</button>
+            
 
             </form>
+        </section>
 
             <ul class="product-card-list">
                 <li class="product-card list-item">
@@ -399,7 +438,7 @@
 
             <div class="pagination-n-show-more-container">
 
-              <button class="button pagination-show-more" type="button">Показать ещё</button>
+              <button class="button pagination-show-more" type="button">Показать ещё</button> <!--ДЛЯ КНОПКИ СО СПИННЕРОМ ДОБАВИТЬ КЛАСС spinner-->
 
               <ul class="pagination-list">
                   <li class="pagination-list-item">

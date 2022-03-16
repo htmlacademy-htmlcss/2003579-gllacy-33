@@ -11,7 +11,7 @@
       <nav class="navigation">
 
         <div class="logo-wrap">
-          <a class="navigation-link logo-link" href="">
+          <a class="logo-link" href="">
             <img class="logo" src="img/index/logo.svg" width="137" height="56" alt="GllacyShop">
           </a>
         </div>
@@ -96,7 +96,7 @@
               <p class="ice-cream-description">Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом<br>
                 – это идеальный десерт для всей семьи.</p>
               
-              <a class="order-now" href="#">Заказать</a>
+              <a class="order-now" href="#">Заказать</a>  <!-- ДЛЯ ВЫЗОВА СПИННЕРА К КНОПКЕ ДОБАВИТЬ КЛАСС spinner-->
              
             </div>
             
@@ -338,19 +338,19 @@
         
           <ul class="strong-points-list">
             <li class="strong-points-item"> 
-              <p class="strong-points-desciption">Всё наше мороженое изготавливается на собственном производстве с использованием современного оборудования и проверенных временем технологий.</p>
+              <p class="strong-points-description ice-cream">Всё наше мороженое изготавливается на собственном производстве с использованием современного оборудования и проверенных временем технологий.</p>
             </li>
 
             <li class="strong-points-item"> 
-              <p class="strong-points-desciption">Для приготовления мороженого используются сливки и молоко высочайшего качества. Все ингредиенты и добавки произведены из натурального сырья.</p>
+              <p class="strong-points-description leaf">Для приготовления мороженого используются сливки и молоко высочайшего качества. Все ингредиенты и добавки произведены из натурального сырья.</p>
             </li>
 
             <li class="strong-points-item"> 
-              <p class="strong-points-desciption">Закупка ингредиентов производится только у проверенных фермерских хозяйств, с которыми нас связывает долговременное сотрудничество.</p>
+              <p class="strong-points-description cow">Закупка ингредиентов производится только у проверенных фермерских хозяйств, с которыми нас связывает долговременное сотрудничество.</p>
             </li>
 
             <li class="strong-points-item">  
-              <p class="strong-points-desciption">Доставка нашего мороженого осуществляется в специальном термопаке, который не даёт мороженому растаять и позволяет сохранить превосходный вкус.</p>
+              <p class="strong-points-description temperature">Доставка нашего мороженого осуществляется в специальном термопаке, который не даёт мороженому растаять и позволяет сохранить превосходный вкус.</p>
             </li>
           </ul>
         </div>
@@ -399,12 +399,12 @@
                     <span class="visually-hidden">Посмотреть дополнительную информацию</span>
                   </button>
                 </label>
-                <input type="text" name="delivery-date" id="delivery-date" placeholder="01.04.2020">
+                <input class="field" type="text" name="delivery-date" id="delivery-date" placeholder="01.04.2020">
               </p>
 
               <p class="delivery-phone-form">
                 <label for="delivery-recipient-phone">Телефон</label>
-                <input type="text" name="delivery-recipient-phone" id="delivery-recipient-phone" placeholder="+7 800 999-00-00">
+                <input class="field" type="text" name="delivery-recipient-phone" id="delivery-recipient-phone" placeholder="+7 800 999-00-00">
               </p>
             
               <p class="delivery-address-form">
@@ -414,7 +414,7 @@
                     <span class="visually-hidden">Посмотреть дополнительную информацию</span>
                   </button>
                 </label>
-                <input type="text" name="delivery-recipient-address" id="delivery-recipient-address" placeholder="ул. Большая Конюшенная, 19/8">
+                <input class="field" type="text" name="delivery-recipient-address" id="delivery-recipient-address" placeholder="ул. Большая Конюшенная, 19/8">
               </p>
 
               <button class="button send-button delivery-button" type="submit">Отправить</button>
