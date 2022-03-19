@@ -318,7 +318,7 @@ body {
 }
 
 .popover-cart {
-    visibility: hidden;
+    display: none;
     min-height: 234px;
     top: 76px;
     right: 0;
@@ -326,8 +326,8 @@ body {
     padding: 48px;
 }
 
-.nav-cart-link:hover .popover-cart { /*не отображается при наведении*/
-    visibility: visible;
+.nav-cart-link:hover + .popover-cart { 
+    display: block;
 }
 
 .popover-content {
@@ -437,7 +437,7 @@ body {
 
 
 .empty-cart-popover {
-    visibility: hidden;
+    display: none;
     position: absolute;
     right: 0;
     top: 76px;
@@ -447,8 +447,8 @@ body {
     z-index: 4;
 }
 
-.nav-cart-link:hover .empty-cart-popover {
-    visibility: visible;
+.nav-cart-link:hover + .empty-cart-popover {
+    display: block;
 }
 
 .empty-cart-popover p {
@@ -464,7 +464,7 @@ body {
 /*search-request popover*/
 
 .popover-search {
-    visibility: hidden;
+    display: none;
     position: absolute;
     top: 76px;
     right: 221px;
@@ -476,7 +476,7 @@ body {
 }
 
 .close-search-window {
-    visibility: hidden;
+    display: none;
     position: absolute;
     top: 36px;
     right: 36px;
@@ -492,14 +492,14 @@ body {
     display: block;  
 }
 
-.search-link:hover .popover-search { /*меню не появляется*/
-    visibility: visible;
+.search-link:hover + .popover-search { 
+    display: block;
 }
 
 /*popover-login*/
 
 .popover-login {
-    visibility: hidden;
+    display: none;
     position: absolute;
     top: 76px;
     right: 113px;
@@ -511,8 +511,8 @@ body {
 
 }
 
-.nav-login-link:hover .popover-login {/*меню не появляется*/
-    visibility: visible;
+.nav-login-link:hover + .popover-login {
+    display: block;
 
 }
 
@@ -1499,7 +1499,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 420px;
-    margin: 0 64px 0 auto;
+    margin: 0 64px 8px auto;
     padding: 40px 40px 42px 40px;
     background-image: none;
     background-color: #FCFCFC;
@@ -1582,6 +1582,15 @@ body {
     color: #B9B9B9;
 }
 
+.tooltip {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 46px;
+    transform: translateX(-6px);
+    z-index: 1;
+}
+
 .info {
     position: absolute;
     width: 14px;
@@ -1595,6 +1604,31 @@ body {
     background-image: url("../img/index/info.svg");
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.tooltip-text {
+    position: absolute;
+    top: -6px;
+    left: 0;
+    transform: translate(23px, 0); /*должно быть 21px, 0, но так внешне не соответствует макету*/
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #565C66;
+    width: 169px;
+    background-color: #FFFFFF;
+    border: 1px solid #B9B9B9;
+    border-radius: 1px;
+    box-shadow: 0 2px 12px 0 rgba(173, 152, 143, 0.18);
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 10px 8px 10px 8px;
+    display: none;
+}
+
+.info:hover + .tooltip-text,
+.info:focus + .tooltip-text {
+    display: block;
 }
 
 
@@ -1810,7 +1844,7 @@ body {
 
 
 .catalog-dropmenu {
-    visibility: none;
+    display: none;
     position: absolute; /*почему не позиционируется относительно navigation-item-current?*/
     left: 153;
     bottom: -192px;

@@ -479,12 +479,16 @@
             <p class="delivery-tip">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
             <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
               <p class="delivery-date-form">
-                <label for="delivery-date">
-                  Дата
-                  <i class="info">
-                    <span class="visually-hidden">Посмотреть дополнительную информацию</span>
-                  </i>
-                </label>
+                <!--<span class="delivery-date">-->
+                  <label for="delivery-date">Дата</label>
+                    <span class="tooltip">
+                    <i class="info" aria-labelledby="tooltip-label">
+                      <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                    </i>
+                    <span class="tooltip-text" role="tooltip" id="tooltip-label">Введите дату по образцу</span>
+                  </span>
+                <!--</span>-->
+                
                 <input class="field" type="text" name="delivery-date" id="delivery-date" placeholder="01.04.2020">
               </p>
 
