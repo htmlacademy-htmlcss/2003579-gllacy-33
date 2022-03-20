@@ -19,14 +19,10 @@
         <li class="navigation-item navigation-item-current">
           <a class="navigation-link navigation-link-current" href="catalog.html">Каталог</a>
           <!--DropMenu-->
-          <div class="navigation-dropmenu catalog-dropmenu">
+          <div class="navigation-dropmenu catalog-dropmenu"> 
+            <a class="catalog-dropmenu-link novelties">Новинки</a>
+            
             <ul class="catalog-dropmenu-list">
-              <li class="catalog-dropmenu-item">
-                <a class="catalog-dropmenu-link novelties">Новинки</a>
-              </li>
-              <li class="catalog-dropmenu-item">
-                <div class="dropmenu-separator"></div>
-              </li>
               <li class="catalog-dropmenu-item">
                 <a class="catalog-dropmenu-link creamsicle" href="#">Сливочное</a>
               </li>
@@ -63,6 +59,22 @@
               <path fill-rule="evenodd" clip-rule="evenodd" d="M2.913 8.246a5.333 5.333 0 1 1 9.17 3.705.655.655 0 0 0-.132.132 5.333 5.333 0 0 1-9.038-3.837Zm9.552 5.162a6.667 6.667 0 1 1 .943-.943l2.81 2.81a.667.667 0 0 1-.943.943l-2.81-2.81Z"/>
             </svg>
           </a>
+
+          <div class="popover popover-search">
+            <div class="popover-content popover-search-content">
+              <form class="search-form" action="https://echo.htmlacademy.ru/" method="get"> <!--Здесь нужен метод get?-->
+                <span class="visually-hidden">Окно поискового запроса</span>
+                <input class="field" placeholder="Поиск по сайту" type="search" name="search-request" id="search-request">
+                <!-- Button в макете нет. как заверстать функцию отправки запроса?-->
+              </form>
+              <button type="button" class="close-search-window">
+                <span class="visually-hidden">Закрыть окно поиска</span>
+                <svg class="close-search-icon" area-hidden="true" focusable="false" width="9" height="9" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.803 1.138A.667.667 0 1 0 8.86.195L5 4.056 1.137.196a.667.667 0 1 0-.943.942L4.056 5 .196 8.86a.667.667 0 0 0 .942.943L5 5.942 8.86 9.803a.667.667 0 1 0 .943-.943L5.942 5l3.861-3.862Z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
         </li>
         <li class="navigation-item icon-n-text-link">
           <a class="nav-login-link" href="#">
@@ -71,6 +83,24 @@
             </svg>
             <span class="log-in">Вход</span>            
           </a>
+
+          <div class="popover popover-login">
+            <div class="popover-content popover-login-content">
+              <h2 class="login-form-title">Личный кабинет</h2>
+              <form class="login-form" action="https://echo.htmlacademy.ru/" method="post">
+                <span class="visually-hidden">Email</span>
+                <input class="field email-login" placeholder="email.example.com" type="email" name="user-email" id="user-email" required>
+                <input class="field password-login" placeholder="Пароль" type="password" name="user-password" id="user-password" required>
+                <button class="button send-button login-button" type="submit">
+                  <span class="send-subscription-data">Войти</span>                
+                </button>
+              </form>
+              <div class="login-form-links-wrap">
+                <a class="login-form-link forgot-password" href="#">Забыли пароль?</a>
+                <a class="login-form-link registration" href="#">Регистрация</a>
+              </div>
+              </div>
+          </div>
         </li>
         <li class="navigation-item icon-n-text-link">
           <a class="nav-cart-link" href="#">
@@ -78,8 +108,53 @@
             <svg class="navigation-icon" area-hidden="true" focusable="false" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M1.313.49a.667.667 0 0 0 0 1.333h2.06l.54 2.696a.662.662 0 0 0 .011.056l1.09 5.44a1.97 1.97 0 0 0 1.962 1.586h6.325a1.97 1.97 0 0 0 1.963-1.586l.001-.005 1.043-5.47a.667.667 0 0 0-.655-.791H5.12l-.545-2.724A.667.667 0 0 0 3.92.49H1.313ZM6.32 9.754l-.935-4.672h9.462l-.892 4.675a.637.637 0 0 1-.636.51H6.958a.637.637 0 0 1-.637-.512v-.001Zm-1.11 4.44a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Zm7.17 0a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Z"/>
             </svg>
-            <span class="cart-status">Пусто</span>
+            <span class="cart-status">2 товара</span>
           </a>
+
+          <div class="popover popover-cart">
+            <div class="popover-content popover-cart-content">
+              <h2 class="popover-title">Корзина</h2>
+              <ul class="cart-items-list">
+                <li class="cart-item">
+                  
+                    <p class="cart-item-title">Малинка</p>
+                    <img class="cart-item-pic" src="img/index/little_raspberry_round.jpg" width="46" height="46" alt="Фотография шарика малинового мороженого">
+                    <p class="cart-item-volume">1 кг х 310 ₽</p>
+                  
+                  <p class="cart-item-price">310 ₽</p>
+                  <button type="button" class="cart-item-button button">
+                    <svg class="cross-icon" area-hidden="true" focusable="false" width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.803 1.138A.667.667 0 1 0 8.86.195L5 4.056 1.137.196a.667.667 0 1 0-.943.942L4.056 5 .196 8.86a.667.667 0 0 0 .942.943L5 5.942 8.86 9.803a.667.667 0 1 0 .943-.943L5.942 5l3.861-3.862Z"/>
+                    </svg>
+                    <span class="visually-hidden">Удалить из корзины</span>
+                  </button>
+                </li>
+                <li class="cart-item">
+                  
+                  <p class="cart-item-title">Бабл-гам</p>
+                  <img class="cart-item-pic" src="img/index/little_bubble_gum_round.jpg" width="46" height="46" alt="Фотография шарика малинового мороженого">
+                  <p class="cart-item-volume">1,5 кг х 320 ₽</p>
+                
+                <p class="cart-item-price">480 ₽</p>
+                <button type="button" class="cart-item-button button">
+                  <svg class="cross-icon" area-hidden="true" focusable="false" width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.803 1.138A.667.667 0 1 0 8.86.195L5 4.056 1.137.196a.667.667 0 1 0-.943.942L4.056 5 .196 8.86a.667.667 0 0 0 .942.943L5 5.942 8.86 9.803a.667.667 0 1 0 .943-.943L5.942 5l3.861-3.862Z"/>
+                  </svg>
+                  <span class="visually-hidden">Удалить из корзины</span>
+                </button>
+              </li>
+              </ul>
+              <div class="cart-bottom-line"></div>
+
+              <div class="buttom-n-sum-wrap">
+                <button class="button send-button buy-cart-button" type="button">Оформить заказ</button>
+                <span class="total-sum">Итого: 790 ₽</span>    
+              </div>
+
+            </div>
+          </div>
+
+
         </li>
       </ul>
       </nav>
