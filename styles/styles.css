@@ -307,8 +307,9 @@ body {
     display: block;
     position: absolute;
     box-sizing: border-box;
-    z-index: 1;
+    background-color: #FF0000;  /*ПРОВЕРКА ОБЕРТКИ*/
     padding: 10px;
+    z-index: 3;
     
     
 }
@@ -330,12 +331,11 @@ body {
 .popover-cart {
     display: none;
     position: absolute;
-    top: calc(100% - 6px);
+    top: calc(100% - 10px);
     right: 0; 
-    padding: 9px;
+    padding: 12px;
     box-sizing: border-box;
-    /*background-color: #FF0000;  ПРОВЕРКА ОБЕРТКИ*/
-    z-index: 1;
+    z-index: 3;
 }
 
 .popover-cart-content {
@@ -469,10 +469,10 @@ body {
     display: none;
     position: absolute;
     right: 0;
-    top: calc(100% - 6px);
+    top: calc(100% - 10px);
     box-sizing: border-box;
-    z-index: 1;
-    padding: 9px;
+    z-index: 3;
+    padding: 12px;
 }
 
 .empty-cart-popover-content {
@@ -510,11 +510,11 @@ body {
 .popover-search {
     display: none;
     position: absolute;
-    top: calc(100% - 6px);
+    top: calc(100% - 10px);
     right: 0px;
-    padding: 9px;
+    padding: 12px;
     box-sizing: border-box;
-    z-index: 1;   
+    z-index: 3;   
 }
 
 .popover-search-content {
@@ -561,11 +561,11 @@ body {
 .popover-login {
     display: none;
     position: absolute;
-    top: calc(100% - 6px);
+    top: calc(100% - 10px);
     right: 0px;
-    padding: 9px;
+    padding: 12px;
     box-sizing: border-box;
-    z-index: 1;
+    z-index: 3;
 
 }
 
