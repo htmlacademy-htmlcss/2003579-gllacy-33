@@ -301,12 +301,21 @@ body {
     margin-bottom: auto;
 }
 
-/*pop-over cart*/
+/*popover*/
 
 .popover {
+    display: block;
     position: absolute;
     box-sizing: border-box;
-    z-index: 1;
+    background-color: #FF0000;  /*ПРОВЕРКА ОБЕРТКИ*/
+    padding: 10px;
+    z-index: 3;
+    
+    
+}
+
+.popover-content {
+    display: block;
     background-color: #FCFCFC;
     font-size: 18px;
     font-weight: 700;
@@ -317,22 +326,42 @@ body {
 
 }
 
+/*popover cart*/
+
 .popover-cart {
     display: none;
+    position: absolute;
+    top: calc(100% - 10px);
+    right: 0; 
+    padding: 12px;
+    box-sizing: border-box;
+    z-index: 3;
+}
+
+.popover-cart-content {
+    display: none;
     min-height: 234px;
-    top: 76px;
-    right: 0;
+    /*height: 100%;*/
     width: 441px;
     padding: 48px;
+    box-sizing: border-box;
+    z-index: 1;
 }
+}
+
 
 .nav-cart-link:hover + .popover-cart { 
     display: block;
 }
 
-.popover-content {
-    height: 100%;
+.popover-cart:hover + .popover-cart-content {
+    display: block;
 }
+
+.nav-cart-link:hover + .popover-cart>.popover-cart-content {
+    display: block;
+}
+
 
 .popover-title {
     margin-top: 0;
@@ -440,14 +469,29 @@ body {
     display: none;
     position: absolute;
     right: 0;
-    top: 76px;
-    width: 288px;
+    top: calc(100% - 10px);
     box-sizing: border-box;
+    z-index: 3;
+    padding: 12px;
+}
+
+.empty-cart-popover-content {
+    display: none;
+    width: 288px;
     padding: 48px;
-    z-index: 4;
+    box-sizing: border-box;
+    z-index: 1;
 }
 
 .nav-cart-link:hover + .empty-cart-popover {
+    display: block;
+}
+
+.empty-cart-popover:hover + .empty-cart-popover-content {
+    display: block;
+}
+
+.nav-cart-link:hover + .empty-cart-popover>.empty-cart-popover-content {
     display: block;
 }
 
@@ -466,16 +510,23 @@ body {
 .popover-search {
     display: none;
     position: absolute;
-    top: 76px;
-    right: 221px;
+    top: calc(100% - 10px);
+    right: 0px;
+    padding: 12px;
+    box-sizing: border-box;
+    z-index: 3;   
+}
+
+.popover-search-content {
+    display: none;
     width: 356px;
     height: 96px;
     padding: 24px 16px 24px 16px;
     box-sizing: border-box;
-    z-index: 2;
+    z-index: 1;
 }
 
-.close-search-window {
+.close-search-window { 
     display: none;
     position: absolute;
     top: 36px;
@@ -496,24 +547,48 @@ body {
     display: block;
 }
 
+.popover-search:hover + .popover-search-content {
+    display: block;
+}
+
+.search-link:hover + .popover-search>.popover-search-content {
+    display: block;
+
+}
+
 /*popover-login*/
 
 .popover-login {
     display: none;
     position: absolute;
-    top: 76px;
-    right: 113px;
-    width: 420px;
-    height: 350px;
-    padding: 48px;
+    top: calc(100% - 10px);
+    right: 0px;
+    padding: 12px;
     box-sizing: border-box;
     z-index: 3;
 
 }
 
+.popover-login-content {
+    display: none;
+    height: 350px;
+    width: 420px;
+    padding: 48px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
 .nav-login-link:hover + .popover-login {
     display: block;
 
+}
+
+.popover-login:hover + .popover-login-content {
+    display: block;
+}
+
+.nav-login-link:hover + .popover-login>.popover-login-content {
+    display: block;
 }
 
 .login-form-title {
@@ -539,8 +614,8 @@ body {
     position: absolute;
     display: flex;
     flex-direction: column;
-    right: 123px;
-    bottom: 52px;
+    left: 194px;
+    bottom: 62px;
 }
 
 .login-form-link {
@@ -1358,6 +1433,7 @@ body {
 }
 
 .article-link {
+    display: block;
     font-weight: 700;
     font-size: 24px;
     line-height: 30px;
@@ -1539,6 +1615,7 @@ body {
 }
 
 .delivery-date-form {
+    position: relative;
     grid-column: 1/2;
     width: 117px;
     display: flex;
@@ -1552,6 +1629,7 @@ body {
 }
 
 .delivery-address-form {
+    position: relative;
     grid-column: 1/-1;
     display: flex;
     flex-direction: column;
@@ -1595,9 +1673,7 @@ body {
     position: absolute;
     width: 14px;
     height: 14px;
-    margin-top: 3px;
-    margin-bottom: 11px;
-    margin-left: 5.5px;
+    display: inline-block;
     padding: 0;
     border: 0;
     background-color: transparent;
@@ -1606,11 +1682,23 @@ body {
     background-position: center;
 }
 
+.delivery-date-form .info {
+    margin-top: 3px;
+    margin-bottom: 11px;
+    margin-left: 5.5px;
+}
+
+.delivery-address-form .info {
+    margin-top: 3px;
+    margin-bottom: 11px;
+    margin-left: 16px;
+}
+
 .tooltip-text {
     position: absolute;
     top: -6px;
     left: 0;
-    transform: translate(23px, 0); /*должно быть 21px, 0, но так внешне не соответствует макету*/
+    transform: translate(25px, 0);
     font-size: 12px;
     line-height: 16px;
     font-weight: 400;
@@ -1626,8 +1714,26 @@ body {
     display: none;
 }
 
-.info:hover + .tooltip-text,
-.info:focus + .tooltip-text {
+.tooltip-text:before {
+    position: absolute;
+    left: -6px;
+    top: 10px;
+    content: "";
+    width: 9px;
+    height: 9px;
+    border-left: 1px solid #B9B9B9;
+    border-bottom: 1px solid #B9B9B9;
+    transform: rotate(45deg);
+    background-color: #FCFCFC;
+}
+
+.delivery-address-form .tooltip-text {
+    left: 12px;
+}
+
+
+.tooltip:hover .tooltip-text,
+.tooltip:focus .tooltip-text {
     display: block;
 }
 
@@ -1838,24 +1944,20 @@ body {
 
 /*drop-menu*/
 
-.navigation-item-current {
+.navigation-item {
     position: relative;
 }
 
 
 .catalog-dropmenu {
     display: none;
-    position: absolute; /*почему не позиционируется относительно navigation-item-current?*/
-    left: 153;
-    bottom: -192px;
+    position: absolute; 
+    top: 100%;
     box-sizing: border-box;
     z-index: 1;
-    display: flex;
     width: 138px;
-    height: 192px;
     background-color: #FCFCFC;
     border-radius: 4px;
-    padding: 16px;
 }
 
 .catalog-dropmenu-list {
@@ -1867,22 +1969,17 @@ body {
 
 }
 
-.dropmenu-separator {
-    height: 1px;
-    background-color: #B9B9B9;
-    margin-bottom: 12px;
-}
-
 .catalog-dropmenu-link {
     display: block;
     margin: 0;
-    margin-bottom: 12px;
     font-size: 14px;
     line-height: 20px;
     font-weight: 400;
     text-decoration: none;
     text-align: left;
     color: #2D3440;
+    padding: 8px 16px;
+    margin-bottom: 4px;
 }
 
 .catalog-dropmenu-link:hover {
@@ -1895,7 +1992,33 @@ body {
 }
 
 .novelties {
+    display: block;
+    position: relative;
     font-weight: 700;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.novelties:after {
+    content: "";
+    position: absolute;
+    width: calc(100% - 32px);
+    margin: 0 auto;
+    background-color: #B9B9B9;
+    height: 1px;
+    bottom: -5px;
+    right: 0;
+    left: 0;
+
+
+}
+
+.catalog-dropmenu-item:first-child {
+    margin-top: 1px;
+}
+
+.catalog-dropmenu-item:last-child {
+    margin-bottom: 8px;
 }
 
 .current-dropmenu-link {
@@ -1908,6 +2031,10 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 807px;
+}
+
+.navigation-item-current:hover .navigation-dropmenu {
+    display: block;
 }
 
 /*Select*/
@@ -2391,11 +2518,10 @@ body {
 /*модальное окно*/
 
 .modal-container {
-    visibility: hidden;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
     width: 100%;
     height: 100%;
     background-color: rgba(45, 52, 64, 0.3);
@@ -2403,9 +2529,9 @@ body {
   }
   
   .modal-window-wrap {
-      visibility: hidden;
+      display: none;
       position: relative;
-      margin: auto; /*не уверена, что такое позиционирование подходит для этого случая, так как модальное окно смещено относительно центра вниз*/
+      margin: auto; 
       width: 570px;
       height: 545px;
       padding: 64px;
@@ -2416,14 +2542,14 @@ body {
       box-shadow: 0 15px 40px 0 rgba(45, 52, 64, 0.12);
   }
 
-
-  .open-feedback-window:active .modal-container {
-      visibility: visible;
+  .modal-container.activate-modal-window {
+      display: flex;
   }
 
-  .open-feedback-window:active .modal-window-wrap { /*модальное окно не отображается при нажатии*/
-    visibility: visible;
-}
+  .modal-window-wrap.activate-modal-window {
+      display: block;
+  }
+
   
   .modal-container p {
       font-size: 24px;

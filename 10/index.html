@@ -43,17 +43,19 @@
           </a>
 
           <div class="popover popover-search">
-            <form class="search-form" action="https://echo.htmlacademy.ru/" method="get"> <!--Здесь нужен метод get?-->
-              <span class="visually-hidden">Окно поискового запроса</span>
-              <input class="field" placeholder="Поиск по сайту" type="search" name="search-request" id="search-request">
-              <!-- Button в макете нет. как заверстать функцию отправки запроса?-->
-            </form>
-            <button type="button" class="close-search-window">
-              <span class="visually-hidden">Закрыть окно поиска</span>
-              <svg class="close-search-icon" area-hidden="true" focusable="false" width="9" height="9" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.803 1.138A.667.667 0 1 0 8.86.195L5 4.056 1.137.196a.667.667 0 1 0-.943.942L4.056 5 .196 8.86a.667.667 0 0 0 .942.943L5 5.942 8.86 9.803a.667.667 0 1 0 .943-.943L5.942 5l3.861-3.862Z"/>
-              </svg>
-            </button>
+            <div class="popover-content popover-search-content">
+              <form class="search-form" action="https://echo.htmlacademy.ru/" method="get"> <!--Здесь нужен метод get?-->
+                <span class="visually-hidden">Окно поискового запроса</span>
+                <input class="field" placeholder="Поиск по сайту" type="search" name="search-request" id="search-request">
+                <!-- Button в макете нет. как заверстать функцию отправки запроса?-->
+              </form>
+              <button type="button" class="close-search-window">
+                <span class="visually-hidden">Закрыть окно поиска</span>
+                <svg class="close-search-icon" area-hidden="true" focusable="false" width="9" height="9" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.803 1.138A.667.667 0 1 0 8.86.195L5 4.056 1.137.196a.667.667 0 1 0-.943.942L4.056 5 .196 8.86a.667.667 0 0 0 .942.943L5 5.942 8.86 9.803a.667.667 0 1 0 .943-.943L5.942 5l3.861-3.862Z"/>
+                </svg>
+              </button>
+            </div>
           </div>
         </li>
         <li class="navigation-item icon-n-text-link">
@@ -65,20 +67,21 @@
           </a>
 
           <div class="popover popover-login">
-            <h2 class="login-form-title">Личный кабинет</h2>
-            <form class="login-form" action="https://echo.htmlacademy.ru/" method="post">
-              <span class="visually-hidden">Email</span>
-              <input class="field email-login" placeholder="email.example.com" type="email" name="user-email" id="user-email" required>
-              <input class="field password-login" placeholder="Пароль" type="password" name="user-password" id="user-password" required>
-              <button class="button send-button login-button" type="submit">
-                <span class="send-subscription-data">Войти</span>                
-              </button>
-            </form>
-            <div class="login-form-links-wrap">
-              <a class="login-form-link forgot-password" href="#">Забыли пароль?</a>
-              <a class="login-form-link registration" href="#">Регистрация</a>
+            <div class="popover-content popover-login-content">
+              <h2 class="login-form-title">Личный кабинет</h2>
+              <form class="login-form" action="https://echo.htmlacademy.ru/" method="post">
+                <span class="visually-hidden">Email</span>
+                <input class="field email-login" placeholder="email.example.com" type="email" name="user-email" id="user-email" required>
+                <input class="field password-login" placeholder="Пароль" type="password" name="user-password" id="user-password" required>
+                <button class="button send-button login-button" type="submit">
+                  <span class="send-subscription-data">Войти</span>                
+                </button>
+              </form>
+              <div class="login-form-links-wrap">
+                <a class="login-form-link forgot-password" href="#">Забыли пароль?</a>
+                <a class="login-form-link registration" href="#">Регистрация</a>
+              </div>
             </div>
-
           </div>
 
           
@@ -90,54 +93,13 @@
               <path fill-rule="evenodd" clip-rule="evenodd" d="M1.313.49a.667.667 0 0 0 0 1.333h2.06l.54 2.696a.662.662 0 0 0 .011.056l1.09 5.44a1.97 1.97 0 0 0 1.962 1.586h6.325a1.97 1.97 0 0 0 1.963-1.586l.001-.005 1.043-5.47a.667.667 0 0 0-.655-.791H5.12l-.545-2.724A.667.667 0 0 0 3.92.49H1.313ZM6.32 9.754l-.935-4.672h9.462l-.892 4.675a.637.637 0 0 1-.636.51H6.958a.637.637 0 0 1-.637-.512v-.001Zm-1.11 4.44a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Zm7.17 0a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Z"/>
             </svg>
             <span class="cart-status">Пусто</span>
-          </a>
+          </a>            
 
-            <div class="popover popover-cart">
-              <div class="popover-content">
-                <h2 class="popover-title">Корзина</h2>
-                <ul class="cart-items-list">
-                  <li class="cart-item">
-                    
-                      <p class="cart-item-title">Малинка</p>
-                      <img class="cart-item-pic" src="img/index/little_raspberry_round.jpg" width="46" height="46" alt="Фотография шарика малинового мороженого">
-                      <p class="cart-item-volume">1 кг х 310 ₽</p>
-                    
-                    <p class="cart-item-price">310 ₽</p>
-                    <button type="button" class="cart-item-button button">
-                      <svg class="cross-icon" area-hidden="true" focusable="false" width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.803 1.138A.667.667 0 1 0 8.86.195L5 4.056 1.137.196a.667.667 0 1 0-.943.942L4.056 5 .196 8.86a.667.667 0 0 0 .942.943L5 5.942 8.86 9.803a.667.667 0 1 0 .943-.943L5.942 5l3.861-3.862Z"/>
-                      </svg>
-                      <span class="visually-hidden">Удалить из корзины</span>
-                    </button>
-                  </li>
-                  <li class="cart-item">
-                    
-                    <p class="cart-item-title">Бабл-гам</p>
-                    <img class="cart-item-pic" src="img/index/little_bubble_gum_round.jpg" width="46" height="46" alt="Фотография шарика малинового мороженого">
-                    <p class="cart-item-volume">1,5 кг х 320 ₽</p>
-                  
-                  <p class="cart-item-price">480 ₽</p>
-                  <button type="button" class="cart-item-button button">
-                    <svg class="cross-icon" area-hidden="true" focusable="false" width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.803 1.138A.667.667 0 1 0 8.86.195L5 4.056 1.137.196a.667.667 0 1 0-.943.942L4.056 5 .196 8.86a.667.667 0 0 0 .942.943L5 5.942 8.86 9.803a.667.667 0 1 0 .943-.943L5.942 5l3.861-3.862Z"/>
-                    </svg>
-                    <span class="visually-hidden">Удалить из корзины</span>
-                  </button>
-                </li>
-                </ul>
-                <div class="cart-bottom-line"></div>
-
-                <div class="buttom-n-sum-wrap">
-                  <button class="button send-button buy-cart-button" type="button">Оформить заказ</button>
-                  <span class="total-sum">Итого: 790 ₽</span>    
-                </div>
-
-              </div>
-            </div>
-
-            <div class="popover empty-cart-popover">
+          <div class="popover empty-cart-popover">
+            <div class="popover-content empty-cart-popover-content">
               <p>Ваша корзина пока пуста</p>
             </div>
+          </div>
 
           
         </li>
@@ -425,14 +387,13 @@
           <ul class="strong-points-list">
             <li class="strong-points-item"> 
               <p class="strong-points-description ice-cream">Всё наше мороженое изготавливается на собственном производстве с использованием современного оборудования и проверенных временем технологий.</p>
-            </li>
-
-            <li class="strong-points-item"> 
-              <p class="strong-points-description leaf">Для приготовления мороженого используются сливки и молоко высочайшего качества. Все ингредиенты и добавки произведены из натурального сырья.</p>
-            </li>
+            </li>           
 
             <li class="strong-points-item"> 
               <p class="strong-points-description cow">Закупка ингредиентов производится только у проверенных фермерских хозяйств, с которыми нас связывает долговременное сотрудничество.</p>
+            </li>
+            <li class="strong-points-item"> 
+              <p class="strong-points-description leaf">Для приготовления мороженого используются сливки и молоко высочайшего качества. Все ингредиенты и добавки произведены из натурального сырья.</p>
             </li>
 
             <li class="strong-points-item">  
@@ -447,7 +408,8 @@
           <article class="new-article">
             <h3 class="visually-hidden">Новый пост блога Магазина Глейси</h3>
             <b>Новое в нашем блоге</b>
-            <a class="new-article article-link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+            <a class="new-article article-link" href="#">10 способов сервировки фруктовых щербетов <br>
+              к столу</a>
           </article>
         </div>
 
@@ -479,15 +441,15 @@
             <p class="delivery-tip">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
             <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
               <p class="delivery-date-form">
-                <!--<span class="delivery-date">-->
+            
                   <label for="delivery-date">Дата</label>
-                    <span class="tooltip">
+                  <span class="tooltip">
                     <i class="info" aria-labelledby="tooltip-label">
                       <span class="visually-hidden">Посмотреть дополнительную информацию</span>
                     </i>
                     <span class="tooltip-text" role="tooltip" id="tooltip-label">Введите дату по образцу</span>
                   </span>
-                <!--</span>-->
+                
                 
                 <input class="field" type="text" name="delivery-date" id="delivery-date" placeholder="01.04.2020">
               </p>
@@ -498,12 +460,14 @@
               </p>
             
               <p class="delivery-address-form">
-                <label for="delivery-recipient-address">
-                  Адрес
-                  <i class="info">
+                <label for="delivery-recipient-address">Адрес</label>
+                <span class="tooltip">
+                  <i class="info" aria-labelledby="tooltip-label">
                     <span class="visually-hidden">Посмотреть дополнительную информацию</span>
                   </i>
-                </label>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label">Введите адрес по образцу</span>
+                </span>
+                
                 <input class="field" type="text" name="delivery-recipient-address" id="delivery-recipient-address" placeholder="ул. Большая Конюшенная, 19/8">
               </p>
 
@@ -591,8 +555,8 @@
       </div>
     </footer>
 
-    <div class="modal-container">  
-      <div class="modal-window-wrap">
+    <div class="modal-container">  <!--ДЛЯ ПОЯВЛЕНИЯ МОДАЛЬНОГО ОКНА НЕОБХОДИМО ДОБАВИТЬ КЛАСС activate-modal-window -->
+      <div class="modal-window-wrap">  <!--ДЛЯ ПОЯВЛЕНИЯ МОДАЛЬНОГО ОКНА НЕОБХОДИМО ДОБАВИТЬ КЛАСС activate-modal-window -->
         <p>Мы обязательно ответим вам!</p>
         <button type="button" class="close-window-button">
           <svg class="close-window-icon" area-hidden="true" focusable="false" width="12.2" height="12.2" viewBox="0 0 12.2 12.2" xmlns="http://www.w3.org/2000/svg">
