@@ -5,7 +5,7 @@
     <title>Каталог</title>
     <link rel="stylesheet" href="styles/styles.css">
   </head>
-  <body>
+  <body class="pink">
     <header class="page-header"> 
       <nav class="navigation">
 
@@ -62,10 +62,9 @@
 
           <div class="popover popover-search">
             <div class="popover-content popover-search-content">
-              <form class="search-form" action="https://echo.htmlacademy.ru/" method="get"> <!--Здесь нужен метод get?-->
+              <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
                 <span class="visually-hidden">Окно поискового запроса</span>
                 <input class="field" placeholder="Поиск по сайту" type="search" name="search-request" id="search-request">
-                <!-- Button в макете нет. как заверстать функцию отправки запроса?-->
               </form>
               <button type="button" class="close-search-window">
                 <span class="visually-hidden">Закрыть окно поиска</span>
@@ -184,12 +183,10 @@
             <h2 class="main-inner-title">Сливочное мороженое</h2>
         </header>
 
+        <!--Фильры товаров-->
+
         <section class="products-filters">
-            <h2 class="visually-hidden">Список товаров с фильтрами</h2>
-
-            
-              
-
+            <h2 class="visually-hidden">Список товаров с фильтрами</h2>          
               <form class="catalog-filter" action="https://echo.htmlacademy.ru" method="get">
 
                 <div class="select-range-radio-container">
@@ -224,7 +221,7 @@
 
                     <div class="range-scale-wrap">               
                       <div class="range-scale">
-                        <div class="range-bar" style="left: 24px; width: 72px">
+                        <div class="range-bar" style="left: 32px; width: 72px">
                           <button class="range-toggle toggle-min">
                             <span class="visually-hidden">Изменить минимальную цену.</span>
                           </button>
@@ -252,7 +249,7 @@
                                 <label class="control">
                                  <input class="visually-hidden control-input" type="radio" name="fat-percent" checked>
                                  <span class="control-mark"></span>
-                                 <span class="control-label">10%</span>
+                                 <span class="control-label">до 10%</span>
                                 </label>   
                             </li>
                             <li class="catalog-filter-item fat-content-list-item">
@@ -318,8 +315,6 @@
                   </fieldset>
 
                   <button class="button apply-button" type="sumbmit">Применить</button>
-            
-
               </form>
             </div>
         </section>
@@ -369,7 +364,8 @@
                       <h3 class="product-card-title">Черника</h3>
                       <img class="product-card-image" src="img/index/blueberry_round.jpg" width="168" height="168" alt="Крем-брюле с черничным джемом">
                     </a>
-                    <p class="product-card-describtion">Крем-брюле с черничным джемом</p>
+                    <p class="product-card-describtion">Крем-брюле <br>
+                      с черничным джемом</p>
                     <div class="price-n-button-wrap">
                       <span class="price">330 ₽/кг</span>
                       <button class="add-to-cart" type="button">
@@ -388,7 +384,8 @@
                       <h3 class="product-card-title">Бабл-гам</h3>
                       <img class="product-card-image" src="img/index/bubble_gum_round.jpg" width="168" height="168" alt="Шарик ванильного пломбира со сладкой посыпкой">
                      </a>
-                    <p class="product-card-describtion">Ванильный пломбир со сладкой посыпкой</p>
+                    <p class="product-card-describtion">Ванильный пломбир <br>
+                      со сладкой посыпкой</p>
                     <div class="price-n-button-wrap">
                       <span class="price">320 ₽/кг</span>
                       <button class="add-to-cart" type="button">
@@ -426,7 +423,8 @@
                       <h3 class="product-card-title">Банан</h3>
                       <img class="product-card-image" src="img/catalog/banana_round.jpg" width="168" height="168" alt="Шарик сливочного пломбира со вкусом банана">
                     </a>
-                    <p class="product-card-describtion">Сливочный пломбир с банановым вкусом</p>
+                    <p class="product-card-describtion">Сливочный пломбир <br>
+                      с банановым вкусом</p>
                     <div class="price-n-button-wrap">
                       <span class="price">340 ₽/кг</span>
                       <button class="add-to-cart" type="button">
@@ -464,7 +462,8 @@
                       <h3 class="product-card-title">Клубничка</h3>
                       <img class="product-card-image" src="img/catalog/strawberry_round.jpg" width="168" height="168" alt="Шарик сливочного пломбира с клубничным вкусом">
                     </a>
-                    <p class="product-card-describtion">Сливочный пломбир с клубничным вкусом</p>
+                    <p class="product-card-describtion">Сливочный пломбир <br>
+                      с клубничным вкусом</p>
                     <div class="price-n-button-wrap">
                       <span class="price">300 ₽/кг</span>
                       <button class="add-to-cart" type="button">
@@ -502,7 +501,8 @@
                       <h3 class="product-card-title">Ментол</h3>
                       <img class="product-card-image" src="img/catalog/menthol_round.jpg" width="168" height="168" alt="Шарик сливочного пломбира с ментоловым сиропом">
                     </a>
-                    <p class="product-card-describtion">Сливочный пломбир с ментоловым сиропом</p>
+                    <p class="product-card-describtion">Сливочный пломбир <br>
+                      с ментоловым сиропом</p>
                     <div class="price-n-button-wrap">
                       <span class="price">320 ₽/кг</span>
                       <button class="add-to-cart" type="button">
@@ -540,7 +540,8 @@
                       <h3 class="product-card-title">Крем-брюле</h3>
                       <img class="product-card-image" src="img/catalog/cream_brulee_round.jpg" width="168" height="168" alt="Шарик мороженого со вкусом крем-брюле">
                     </a>  
-                    <p class="product-card-describtion">Классическое крем-брюле</p>
+                    <p class="product-card-describtion">Классическое <br>
+                      крем-брюле</p>
                     <div class="price-n-button-wrap">
                       <span class="price">280 ₽/кг</span>
                       <button class="add-to-cart" type="button">
@@ -628,18 +629,18 @@
         </section>
 
 
-        <section class="extra-links">
+        <section class="extra-links catalog-footer-extra-links">
           <ul class="extra-links-list">
-            <li class="extra-links list-item">
+            <li class="extra-links-item list-item for-suppliers-item">
               <a class="extra-link for-suppliers" href="#">Для поставщиков</a>
             </li>
-            <li class="extra-links list-item">
+            <li class="extra-links-item list-item">
               <a class="extra-link" href="#">О производстве</a>
             </li>
-            <li class="extra-links list-item">
+            <li class="extra-links-item list-item">
               <a class="extra-link" href="#">Наши документы</a>
             </li>
-            <li class="extra-links list-item">
+            <li class="extra-links-item list-item">
               <a class="extra-link" href="#">Экологические стандарты</a>
             </li>
           </ul>
